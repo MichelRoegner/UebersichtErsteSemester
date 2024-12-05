@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/styleMain.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betriebswirtschaftslehre</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <img src="images/HSFL_Logo_weiss.png" alt="">
+            <a href="index.html" class="active">Startseite</a>
+            <div id="myLinks">
+                <div id="firstSemester" class="dropdown">
+                    <div>1.Semester</div>
+                    <div id="firstSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="iid.html">Interface und Interaktionsdesign</a>
+                            </li>
+                            <li>
+                                <a href="strukprog.html">Strukturierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="englisch.html">Fachenglisch</a>
+                            </li>
+                            <li>
+                                <a href="cabs.html">Computerarchitektur und Betriebssysteme</a>
+                            </li>
+                            <li>
+                                <a href="webdes.html">Webdesign</a>
+                            </li>
+                            <li>
+                                <a href="mathe1.html">Mathematik 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="secondSemester" class="dropdown">
+                    <div>2.Semester</div>
+                    <div id="secondSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="bwl.html">Betriebswirtschaftslehre</a>
+                            </li>
+                            <li>
+                                <a href="webtech.html">Web-Technologien</a>
+                            </li>
+                            <li>
+                                <a href="ute.html">Usability Testing & Engineering</a>
+                            </li>
+                            <li>
+                                <a href="oop.html">Objektorientierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="cone.html">Computernetze / Netzwerkkommunikation</a>
+                            </li>
+                            <li>
+                                <a href="kop.html">Kommunikation und Präsentation</a>
+                            </li>
+                            <li>
+                                <a href="mathe2.html">Mathematik 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="dropdown()">
+            <div class="container" onclick="change(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </a>
+        </nav>
+        <h1>Betriebswirtschaftslehre</h1>
+    </header>
+
+    <aside id="left">
+
+    </aside>
+
+    <main>
+        <section>
+            <h2>Übersicht</h2>
+            <p>Das Modul "BWL" vermittelt grundlegende wirtschaftswissenschaftliche 
+                Konzepte und deren Anwendung. Der Fokus liegt auf 
+                betriebswirtschaftlichen Prozessen, strategischem Management 
+                und der Analyse wirtschaftlicher Zusammenhänge.</p>
+        </section>
+        <section>
+            <h2>Inhalte</h2>
+            <ul>
+                <li><strong>Grundlagen der Betriebswirtschaftslehre:</strong> Unternehmensformen, Rechnungswesen, Marketing.</li>
+                <li><strong>Strategisches Management:</strong> SWOT-Analyse, Wettbewerbsstrategien, Unternehmensziele.</li>
+                <li><strong>Wirtschaftsanalyse:</strong> Marktforschung, Kostenrechnung, Entscheidungsmodelle.</li>
+                <li><strong>Praktische Anwendungen:</strong> Erstellung von Businessplänen, Analyse von Fallstudien.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ablauf</h2>
+            <ul>
+                <li><strong>Theoretische Grundlagen:</strong>
+                    <ul>
+                        <li>Einführung in die Betriebswirtschaft und strategische Planung.</li>
+                        <li>Besprechung von Marktanalysen und Kostenstrukturen.</li>
+                    </ul>
+                </li>
+                <li><strong>Praktische Übungen:</strong>
+                    <ul>
+                        <li>Durchführung einer SWOT-Analyse eines realen Unternehmens.</li>
+                        <li>Erstellung eines Marketingplans basierend auf Marktdaten.</li>
+                        <li>Analyse und Präsentation betriebswirtschaftlicher Fallstudien.</li>
+                    </ul>
+                </li>
+                <li><strong>Projekte:</strong>
+                    <ul>
+                        <li>Entwicklung eines Businessplans für ein fiktives Startup.</li>
+                        <li>Simulation von Managemententscheidungen in einem Unternehmensplanspiel.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ziele des Moduls</h2>
+            <p>Studierende sollen ein Verständnis für betriebswirtschaftliche Prozesse 
+                entwickeln und diese auf praktische Fragestellungen anwenden können. 
+                Ziel ist es, fundierte Entscheidungen im wirtschaftlichen Kontext 
+                treffen zu können.</p>
+        </section>
+        <section>
+            <h2>Beispiel</h2>
+            <p>
+                Finanzierungsplan aus einem Businessplan, der als Hausarbeit erstellt wurde.
+            </p>
+            <p>
+                <img src="images/bwl.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </p>
+        </section>
+    </main>
+
+    <aside id="right">
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function dropdown() {
+            let links = document.getElementById("myLinks");
+            links.style.display = links.style.display === "block" ? "none" : "block";
+        }
+
+        function change(x) {
+            x.classList.toggle("change");
+        }
+        </script>
+</body>
+</html>

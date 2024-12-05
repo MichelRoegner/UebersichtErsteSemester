@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/grid.css">
+    <link rel="shortcut icon" href="Icon/Icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="h1">Grid</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" title="Startseite" class="notActive"></a>
+                </li>
+                <li>
+                    <a href="textstyle.html" title="Text-Styling mit CSS" class="notActive"></a>
+                </li>
+                <li>
+                    <a href="gridlayout.html" title="Grid-Layout" class="active"></a>
+                </li>
+                <li>
+                    <a href="flexbox.html" title="Flex-Layout" class="notActive"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="left">
+
+    </aside>
+    <main>
+
+        <article>
+            <h2>Intro</h2>
+            <p>
+                Das CSS Grid Layout ist eine Technik zur Erstellung von
+                Webseitenlayouts. Es ermöglicht die Erstellung eines zweidimensionalen
+                Rastersystems, das eine präzise Positionierung von HTML-Elementen auf
+                einer Webseite ermöglicht. Mit Grid können Entwickler komplexe Layouts
+                erstellen, die flexibel, responsiv und einfach zu handhaben sind.
+                Durch die Strukturierung von Inhalten in Spalten und Zeilen bietet
+                das Grid Layout eine effiziente Möglichkeit, das Design und die
+                Struktur von Webseiten zu gestalten, wodurch eine verbesserte
+                Kontrolle über das Erscheinungsbild der Webseite erreicht wird.
+            </p>
+
+        </article>
+
+
+        <article>
+            <h2>grid</h2>
+            <p>
+                In diesem Element wird einmal die
+                Anordnung der Inhalte mit und einmal
+                ohne <code>display: grid;</code> Elemente gezeigt
+            </p>
+            <br>
+            <p>
+                Mit <code>display:grid;</code>
+            </p>
+            <section class="grid">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkGrid" type="checkbox" name="menu" />
+            <label for="checkGrid">Code anzeigen</label>
+            <section class="code secGrid">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+
+                    <pre>
+                        &ltsection class="grid"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.grid {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-template-rows: repeat(3, 1fr);
+                        }
+                        section.grid > p:nth-of-type(1) {
+                            grid-row: 1 / 2;
+                            grid-column: 1 / 3;
+                        }
+                        section.grid > p:nth-of-type(2) {
+                            grid-row: 1 / 3;
+                            grid-column: 3 / 4;
+                        }
+                        section.grid > p:nth-of-type(3) {
+                            grid-row: 2 / 4;
+                            grid-column: 1 / 2;
+                        }
+                        section.grid > p:nth-of-type(4) {
+                            grid-row: 3 / 4;
+                            grid-column: 2 / 4;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Ohne <code>display:grid;</code>
+            </p>
+            <section class="ohneGrid">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkOhneGrid" type="checkbox" name="menu" />
+            <label for="checkOhneGrid">Code anzeigen</label>
+            <section class="code secOhneGrid">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="ohneGrid"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.ohneGrid{
+                            background-color: white;
+                            padding: 1em;
+                            display: block;
+                        }
+                        section.ohneGrid > p{
+                            background-color: orange;
+                            margin: .5em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            
+        </article>
+
+        <article>
+            <h2>template-columns</h2>
+            <p>
+                Mit dem Befehl <code>grid-template-column:</code> 
+                und einer Liste von Spaltenbreiten erhält man Spalten.
+                Angegeben werden müssen jeweils die breite pro Angabe.
+            </p>
+            <br>
+            <p>
+                Mit <code>grid-template-columns: 1fr 1fr;</code>
+            </p>
+            <section class="spaltenErzeugen">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </section>
+            <input id="checkSpaltenErzeugen" type="checkbox" name="menu" />
+            <label for="checkSpaltenErzeugen">Code anzeigen</label>
+            <section class="code secSpaltenErzeugen">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="spaltenErzeugen"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.spaltenErzeugen{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Mit <code>grid-template-rows: 1fr 4fr 1fr;</code>
+            </p>
+            <section class="zeilenErzeugen">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </section>
+            <input id="checkZeilenErzeugen" type="checkbox" name="menu" />
+            <label for="checkZeilenErzeugen">Code anzeigen</label>
+            <section class="code secZeilenErzeugen">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="zeilenErzeugen"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.zeilenErzeugen{
+                            display: grid;
+                            grid-template-rows: 1fr 4fr 1fr;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Mit <code>grid-template-columns: 1fr 1fr;</code> und
+                <code>grid-template-rows: 1fr 4fr 1fr;</code>
+            </p>
+            <section class="beidesErzeugen">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+            </section>
+            <input id="checkBeidesErzeugen" type="checkbox" name="menu" />
+            <label for="checkBeidesErzeugen">Code anzeigen</label>
+            <section class="code secBeidesErzeugen">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="beidesErzeugen"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.beidesErzeugen{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr 4fr 1fr;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>minmax()</h2>
+            <p>
+                mit der <code>minmax()</code> Funktion kann man einer Spalte
+                eine minimale und eine maximale Breite zuweisen
+            </p>
+            <br>
+            <p>
+                Mit <code>grid-template-columns: minmax(200px, auto) repeat(3, 1fr)</code>
+            </p>
+            <section class="minmax">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkMinmax" type="checkbox" name="menu" />
+            <label for="checkMinmax">Code anzeigen</label>
+            <section class="code secMinmax">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="minmax"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.minmax{
+                            display: grid;
+                            grid-template-columns: minmax(200px, auto) repeat(3, 1fr);
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>gap</h2>
+            <p>
+                Mit dem column gap und row gap befehl lässt sich eine
+                Lücke zwischen den Spalten und 
+                Zeilen erzeugen.
+            </p>
+            <br>
+            <p>
+                Mit <code>gap: 1em;</code>
+            </p>
+            <section class="gap">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkGap" type="checkbox" name="menu" />
+            <label for="checkGap">Code anzeigen</label>
+            <section class="code secGap">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="gap"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.gap {
+                            margin: 0;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 1em;
+                        }
+                        section.gap > p {
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Mit <code>row-gap: 1em;</code>
+            </p>
+            <section class="gapRow">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkGapRow" type="checkbox" name="menu" />
+            <label for="checkGapRow">Code anzeigen</label>
+            <section class="code secGapRow">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="gapRow"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.gapRow {
+                            margin: 0;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            row-gap: 1em;
+                        }
+                        section.gapRow > p {
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Mit <code>column-gap: 1em;</code>
+            </p>
+            <section class="gapColumn">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkGapColumn" type="checkbox" name="menu" />
+            <label for="checkGapColumn">Code anzeigen</label>
+            <section class="code secGapColumn">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="gapColumn"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.gapColumn {
+                            margin: 0;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            column-gap: 1em;
+                        }
+                        section.gapColumn > p {
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>auto-row</h2>
+            <p>
+                Mit dem Befehl <code>grid-auto-row</code> kann eine 
+                Höhe bestimmt werden, denn neue Zeilen haben
+                per Default eine Höhe die sich am höchsten
+                Inhalt eines Elementes orientiert.
+            </p>
+            <br>
+            <p>
+                Mit <code>grid-auto-rows: 120px;</code>
+            </p>
+            <section class="autoRow">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkAutoRow" type="checkbox" name="menu" />
+            <label for="checkAutoRow">Code anzeigen</label>
+            <section class="code secAutoRow">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="autoRow"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.autoRow{
+                            display: grid;
+                            grid-template-columns: 50% 50%;
+                            grid-auto-rows: 120px;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Ohne <code>grid-auto-rows: 120px;</code>
+            </p>
+            <section class="ohneAutoRow">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkOhneAutoRow" type="checkbox" name="menu" />
+            <label for="checkOhneAutoRow">Code anzeigen</label>
+            <section class="code secOhneAutoRow">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="ohneAutoRow"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.ohneAutoRow{
+                            display: grid;
+                            grid-template-columns: 50% 50%;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>column-start <br>column-end</h2>
+            <p>
+                Mit dem <code>grid-column-start:</code> und <code>grid-column-end</code> tag lässt sich bestimmen
+                von welcher Linie gestartet wird und bei welcher geendet soll.
+            </p>
+            <br>
+            <p>
+                Mit <code>grid-column-start: 3;</code> , <code>grid-row-start: 1;</code> und <code>grid-row-end: 3;</code>
+            </p>
+            <section class="startEnd">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+                <p>9</p>
+            </section>
+            <input id="checkStartEnd" type="checkbox" name="menu" />
+            <label for="checkStartEnd">Code anzeigen</label>
+            <section class="code secStartEnd">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="startEnd"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                            &ltp&gt9&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.startEnd{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-auto-flow: dense;
+                        }
+                        section.startEnd > p:nth-of-type(1) {
+                            grid-column-start: 3;
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                        
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>span</h2>
+            <p>
+                Mit <code>span </code> lässt sich ein element über
+                mehrere Spalten spannen
+            </p>
+            <br>
+            <p>
+                Mit <code>grid-column: span 2;</code>
+            </p>
+            <section class="span">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkSpan" type="checkbox" name="menu" />
+            <label for="checkSpan">Code anzeigen</label>
+            <section class="code secSpan">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="span"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.span{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                        }
+                        section.span > p:nth-of-type(2){
+                            grid-column: span 2;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>row</h2>
+            <p>
+                Alle bisher genannten tags lassen sich 
+                Analog mit <code>grid-template-rows:</code> anwenden
+                nur das diese sich auf Zeilen beziehen.
+                Wie hier beispielsweise mit der Höhe.
+            </p>
+            <br>
+            <p>
+                Mit <code>grid-template-rows: 1fr 2fr 1fr;</code>
+            </p>
+            <section class="rowHeight">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+                <p>9</p>
+            </section>
+            <input id="checkRowHeight" type="checkbox" name="menu" />
+            <label for="checkRowHeight">Code anzeigen</label>
+            <section class="code secRowHeight">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="rowHeight"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                            &ltp&gt9&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.rowHeight{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-template-rows: 1fr 2fr 1fr;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>justify-content</h2>
+            <p>
+                Mit dem tag <code>justify-content: start;</code> werden
+                die Elemente am Start also links ausgerichtet.
+                Wenn man den tag <code>justify-content: center;</code> 
+                verwendet werden die Elemente mittig
+                ausgerichtet.
+                Und wenn man den <code>justify-content: end;</code> tag 
+                benutzt werden die Elemente am ende also
+                rechts ausgerichtet.
+            </p>
+            <br>
+            <p>
+                Mit <code>justify-content: start;</code>
+            </p>
+            <section class="justifyStart">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustifyStart" type="checkbox" name="menu" />
+            <label for="checkJustifyStart">Code anzeigen</label>
+            <section class="code secJustifyStart">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justifyStart"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justifyStart{
+                            display: grid;
+                            justify-content: start;
+                            grid-template-columns: 100px;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Mit <code>justify-content: center;</code>
+            </p>
+            <section class="justifyCenter">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustifyCenter" type="checkbox" name="menu" />
+            <label for="checkJustifyCenter">Code anzeigen</label>
+            <section class="code secJustifyCenter">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justifyCenter"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justifyCenter{
+                            display: grid;
+                            justify-content: center;
+                            grid-template-columns: 100px;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Mit <code>justify-content: end;</code>
+            </p>
+            <section class="justifyEnd">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustifyEnd" type="checkbox" name="menu" />
+            <label for="checkJustifyEnd">Code anzeigen</label>
+            <section class="code secJustifyEnd">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justifyEnd"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justifyEnd{
+                            display: grid;
+                            justify-content: end;
+                            grid-template-columns: 100px;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>place-items</h2>
+            <p>
+                Im Normalfall füllt ein Element seine 
+                Zelle vollständig aus, dies lässt sich 
+                mit <code>align-items</code> für die Spalten Und
+                <code>justify-items</code> für die Zeilen ändern.
+            </p>
+            <p>
+                Mit <code>place-content</code> und <code>place-items</code> lassen
+                sich die Elemente in beide Richtungen
+                gleichzeitig ausrichten.
+            </p>
+            <br>
+            <p>
+                Mit <code>align-items: center;</code> und <code>justify-items: start;</code>
+            </p>
+            <section class="alignItems">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkAlignItems" type="checkbox" name="menu" />
+            <label for="checkAlignItems">Code anzeigen</label>
+            <section class="code secAlignItems">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="alignItems"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.alignItems{
+                            margin: 0;
+                            display: grid;
+                            grid-template-columns: 120px 120px;
+                            grid-template-rows: 120px 120px;
+                            align-items: center;
+                            justify-items: start;
+                        }
+                        section.alignItems > p {
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Mit <code>align-items: start;</code> und <code>justify-items: end;</code>
+            </p>
+            <section class="justifyItems">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustifyItems" type="checkbox" name="menu" />
+            <label for="checkJustifyItems">Code anzeigen</label>
+            <section class="code secJustifyItems">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justifyItems"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justifyItems{
+                            margin: 0;
+                            display: grid;
+                            grid-template-columns: 120px 120px;
+                            grid-template-rows: 120px 120px;
+                            align-items: start;
+                            justify-items: end;
+                        }
+                        section.justifyItems > p {
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Mit <code>place-items: end center;</code> und <code>place-content: end center;</code>
+            </p>
+            <section class="placeItems">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkPlaceItems" type="checkbox" name="menu" />
+            <label for="checkPlaceItems">Code anzeigen</label>
+            <section class="code secPlaceItems">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="placeItems"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.placeItems{
+                            margin: 0;
+                            display: grid;
+                            gap: 1em;
+                            grid-template-columns: 120px 120px;
+                            grid-template-rows: 120px 120px;
+                            place-items: end center;
+                            place-content: end center;
+                        }
+                        section.placeItems > p {
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+        
+    </main>
+    <aside class="right">
+        
+    </aside>
+    <footer>
+        <a href="#h1">nach Oben</a>
+    </footer>
+</body>
+</html>

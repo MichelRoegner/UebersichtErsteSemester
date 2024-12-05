@@ -1,0 +1,135 @@
+:root {
+    --bg-sand: #fff4dc;
+    --bg-grey: #fdffdc;
+}
+*{
+    margin: 0;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 100vw;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-sand);
+}
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 1.3em;
+}
+nav > ul > li > a { 
+    font-size: 1.5em;
+}
+
+header {
+    order: 1;
+}
+nav > ul, nav > ol {
+    padding: 0;
+    list-style: none;
+}
+li {
+    padding-top: .7em;
+}
+nav > ul > li > a {
+    display: block;
+    background-color: var(--bg-grey);
+    text-align: center;
+}
+a.notActive::after {
+    content:attr(title); 
+}
+a.active::after {
+    content: 'diese Seite';
+}
+
+aside {
+    order: 3;
+}
+aside.left {
+    order: 2;
+
+}
+section.code {
+    display: flex;
+    flex-wrap: wrap;
+}
+section.code > section {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+pre {
+    font-size: .7em;
+    white-space: pre-line;
+}
+
+main {
+    order: 1;
+}
+article {
+    margin: 1.7em .2em .7em .2em;
+    background-color: var(--bg-grey);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+
+footer {
+    order: 4;
+}
+
+
+@media (width > 850px) {
+    body {
+        display: grid;
+        grid-template-columns: minmax(300px, auto) minmax(400px, 1200px) minmax(100px, auto);
+        grid-template-rows: 120px 1fr 80px;
+        grid-template-areas: 
+            "head head head"
+            "aleft main aright"
+            "foot foot foot";
+    }
+    header {
+        grid-area: head;
+    }
+    nav > ul, nav > ol {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+    nav > ul > li > a {
+        background-color: var(--bg-sand);
+        font-size: 1.5em;
+    }
+
+    aside {
+        grid-area: aright;
+    }
+    aside.left {
+        grid-area: aleft;
+    
+    }
+    main {
+        grid-area: main;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        position: sticky;
+        display: inline-block;
+        margin-left: -270px;
+        top: .7em;
+    }
+
+    footer {
+        grid-area: foot;
+    }
+
+}

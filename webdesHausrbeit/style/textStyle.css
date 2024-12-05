@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+}
+
+section {
+    background-color: white;
+}
+header a{
+    padding: 10px;
+}
+
+aside.left {
+    grid-area: aleft;
+}
+
+/* main formatierung und snap */
+
+
+section{
+    scroll-snap-align: start;
+    flex: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* beispiel color */
+.color_bsp{
+    color: rgb(255, 255, 255);
+}
+section:has(p.color_bsp){
+    background-color: blue;
+}
+
+/* Listenabstand */
+ul, ol, li{
+    margin: .5em;
+}
+nav > ul, nav > ul > li {
+    margin: 0;
+}
+
+/* formatierung code tags */
+code{
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+
+/* beispiel Boxen */
+.beispiele{
+    border: 1px solid black;
+    padding: 0.2em;
+}
+
+/* Abstand der .beispiele Inhalte */
+.beispiele > h2, p{
+    padding: 1em 0;
+}
+
+/* text-size */
+#size{
+    font-size: 20px;
+}
+
+/* zeilenumbruch */
+.umbruch{
+    display: block;
+}
+
+/* Font-family */
+.arial {
+    font-family: Arial;
+}
+.courier {
+    font-family: 'Courier New';
+}
+.georgia {
+    font-family: Georgia;
+}
+.times {
+    font-family: 'Times New Roman';
+}
+.verdana {
+    font-family: Verdana;
+}
+
+/* default-fonts */
+.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+.sansSerif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+.kursiv {
+    font-family: 'Brush Script MT';
+}
+.fantasy {
+    font-family: papyrus, Jokerman;
+}
+
+/* font-size */
+
+.fontPx {
+    font-size: 24px;
+}
+
+section:has(p.fontEm) {
+    font-size: 16px;
+}
+.fontEm{
+    font-size: 1.5em;
+}
+.fontRem {
+    font-size: 1.5rem;
+}
+
+/* font-style */
+.fontItalic {
+    font-style: italic;
+}
+.fontOblique {
+    font-style: oblique;
+}
+
+/* font-weight */
+.fontNormal {
+    font-weight: normal;
+}
+.fontBold {
+    font-weight: bold;
+}
+
+/* text-transform */
+.uppercase {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+
+/* text-decoration */
+.underline {
+    text-decoration: underline;
+}
+.allLine {
+    text-decoration: underline overline line-through;
+}
+.dashedLine {
+    text-decoration: underline overline line-through dashed;
+}
+.redLined {
+    text-decoration: underline overline line-through red dashed;
+}
+
+/* text-shadow */
+.botRight {
+    text-shadow: 2px 2px rgb(120, 120, 120);
+}
+.topLeft {
+    text-shadow: -2px -2px 2px rgb(120, 120, 120);
+}
+
+/* text-align */
+.textCenter {
+    text-align: center;
+}
+.textJustify {
+    text-align: justify;
+}
+.textRight {
+    text-align: right;
+}
+.textLeft {
+    text-align: left;
+}
+
+
+section.code > section {
+    border: 1px solid black;
+    padding: .3em;
+}
+input, section.code {
+    display: none;
+    padding: 1em;
+    border: 1px solid black;
+}
+label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+
+input#checkColor_bspTop:checked~section.secColor_bspTop,
+input#checkColor_bspBot:checked~section.secColor_bspBot,
+
+input#checkCourier:checked~section.secCourier,
+
+input#checkSerif:checked~section.secSerif,
+input#checkSansSerif:checked~section.secSansSerif,
+input#checkMonospace:checked~section.secMonospace,
+input#checkKursiv:checked~section.secKursiv,
+input#checkFantasy:checked~section.secFantasy,
+
+input#checkFontPx:checked~section.secFontPx,
+input#checkFontEm:checked~section.secFontEm,
+input#checkFontRem:checked~section.secFontRem,
+
+input#checkFontItalic:checked~section.secFontItalic,
+input#checkFontOblique:checked~section.secFontOblique,
+
+input#checkFontNormal:checked~section.secFontNormal,
+input#checkFontBold:checked~section.secFontBold,
+
+input#checkUppercase:checked~section.secUppercase,
+input#checkCapitalize:checked~section.secCapitalize,
+input#checkLowercase:checked~section.secLowercase,
+
+input#checkUnderline:checked~section.secUnderline,
+input#checkAllLine:checked~section.secAllLine,
+input#checkDashedLine:checked~section.secDashedLine,
+input#checkRedLined:checked~section.secRedLined,
+
+input#checkBotRight:checked~section.secBotRight,
+input#checkTopLeft:checked~section.secTopLeft,
+
+input#checkTextCenter:checked~section.secTextCenter,
+input#checkTextJustify:checked~section.secTextJustify,
+input#checkTextRight:checked~section.secTextRight,
+input#checkTextLeft:checked~section.secTextLeft{
+
+    display: flex;
+}
+
+
+@media (width > 850px) {
+    *{
+        overflow-x: visible;
+    }
+}

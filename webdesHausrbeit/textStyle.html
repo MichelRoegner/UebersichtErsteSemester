@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/textStyle.css">
+    <link rel="shortcut icon" href="Icon/Icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextStyling</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="h1">TextStyling</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" title="Startseite" class="notActive"></a>
+                </li>
+                <li>
+                    <a href="textstyle.html" title="Text-Styling mit CSS" class="active"></a>
+                </li>
+                <li>
+                    <a href="gridlayout.html" title="Grid-Layout" class="notActive"></a>
+                </li>
+                <li>
+                    <a href="flexbox.html" title="Flex-Layout" class="notActive"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="left">
+
+    </aside>
+    <main>
+
+        <article>
+            <h2>Intro</h2>
+            <p>
+                Text-Styling in CSS ermöglicht es Texte auf einer Webseite ansprechend
+                und lesbar zu gestalten.
+            </p>
+            <p>
+                Damit können Schriftart, Schriftgröße, Schriftfarbe, Schriftstil und Textausrichtung
+                angepasst werden.
+            </p>
+            <p>
+                So kann auf Webseiten der Text jeweils individuell angepasst werden um diesen so,
+                je nach Bedürfnis, darstellen zu können.
+            </p>
+        </article>
+
+
+        <article>
+            <h2>
+                color
+                <br>
+                background-color
+            </h2>
+            <p>
+                Die Farbgestaltung von Texten und Hintergründen spielt in der Webentwicklung eine zentrale Rolle. Die
+                CSS-Eigenschaften <code>color</code> und <code>background-color</code> ermöglichen diese Anpassung. Hier
+                einige Möglichkeiten, Farben in CSS anzugeben:
+            <ul>
+                <li>Color-Keywords: z.B. red, blue, green, <a
+                        href="https://protocol.mozilla.org/docs/fundamentals/color">Mozilla Color List</a></li>
+                <li>RGB-Werte als HEX: z.B. #FF0000 (Rot)</li>
+                <li>RGB-Funktion: z.B. rgb(255, 0, 0)</li>
+                <li>RGBA-Funktion: z.B. rgba(255, 0, 0, 0.5) (halbdurchsichtig)</li>
+                <li>HSL-Funktion: für Farbton, Sättigung und Helligkeit</li>
+                <li>HSLA-Funktion: wie HSL, aber mit Transparenz</li>
+            </ul>
+            </p>
+            <br>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>background-color: blue;</code> und <code>color: rgb(255, 255, 255);</code>
+            </p>
+            <section class="beispiele">
+                <p class="color_bsp">
+                    Mit <code>Background-Color: blue;</code> wird der Hintergrund blau gefärbt.
+                </p>
+            </section>
+            <input id="checkColor_bspTop" type="checkbox" name="menu" />
+            <label for="checkColor_bspTop">Code anzeigen</label>
+            <section class="code secColor_bspTop">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+
+                    <pre>
+                        &ltp class="color_bsp"&gt
+                            Mit &ltcode&gtBackground-Color: blue;&lt/code&gt wird der Hintergrund blau gefärbt.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .color_bsp{
+                            color: rgb(255, 255, 255);
+                        }
+                        section:has(p.color_bsp){
+                            background-color: blue;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>background-color: blue;</code> und <code>color: rgb(255, 255, 255);</code>
+            </p>
+            <section class="beispiele">
+                <p class="color_bsp">
+                    Mit <code>Color: rgb(255, 255, 255);</code> wird die Schriftfarbe zu Weiß geändert.
+                </p>
+            </section>
+            <input id="checkColor_bspBot" type="checkbox" name="menu" />
+            <label for="checkColor_bspBot">Code anzeigen</label>
+            <section class="code secColor_bspBot">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="color_bsp"&gt
+                            Mit &ltcode&ltColor: rgb(255, 255, 255);&lt/code&lt wird die Schriftfarbe zu Weiß geändert.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .color_bsp{
+                            color: rgb(255, 255, 255);
+                        }
+                        section:has(p.color_bsp){
+                            background-color: blue;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            
+        </article>
+
+        <article>
+            <h2>
+                font-family
+            </h2>
+            <p>
+                Mit <code>font-family</code> kann die Schriftart geändert werden. Es können mehrere Schriftarten
+                angegeben werden, wobei nur die erste verfügbare verwendet wird. Einige Standard-Schriftarten sind:
+                <ul>
+                    <li class="arial" >Arial</li>
+                    <li class="courier">Courier New</li>
+                    <li class="georgia">Georgia</li>
+                    <li class="times">Times New Roman</li>
+                    <li class="verdana">und Verdana</li>
+                </ul>
+            </p>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-family: 'Courier New';</code>
+            </p>
+            <section class="beispiele">
+                <p class="courier">
+                    Beispieltext mit Courier New Schriftart.
+                </p>
+            </section>
+            <input id="checkCourier" type="checkbox" name="menu" />
+            <label for="checkCourier">Code anzeigen</label>
+            <section class="code secCourier">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="courier"&gt
+                            Beispieltext mit Courier New Schriftart.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .courier {
+                            font-family: 'Courier New';
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>
+                default-fonts
+            </h2>
+            <p>
+                <ul>
+                    <li>Serif: Traditionell und formell mit dekorativen Strichen an den Buchstabenenden.</li>
+                    <li>Sans-serif: Modern und sauber ohne dekorative Striche. Gut für digitale Inhalte.
+                    </li>
+                    <li>Monospace: Feste Breite für jeden Buchstaben, oft für Programmierung.
+                    </li>
+                    <li>Kursive: Fließende Handschrift, elegant und persönlich.
+                    </li>
+                    <li>Fantasy: Kreativ und dekorativ, für spezielle Themen.
+                    </li>
+                </ul>
+            </p>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-family: 'Times New Roman', Times, serif;</code>
+            </p>
+            <section class="beispiele">
+                <p class="serif">
+                    Beispieltext mit Serif-Schriftart.
+                </p>
+            </section>
+            <input id="checkSerif" type="checkbox" name="menu" />
+            <label for="checkSerif">Code anzeigen</label>
+            <section class="code secSerif">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="serif"&gt
+                            Beispieltext mit Serif-Schriftart.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .serif {
+                            font-family: 'Times New Roman', Times, serif;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-family: Arial, Helvetica, sans-serif;</code>
+            </p>
+            <section class="beispiele">
+                <p class="sansSerif">
+                    Beispieltext mit Sans-serif-Schriftart.
+                </p>
+            </section>
+            <input id="checkSansSerif" type="checkbox" name="menu" />
+            <label for="checkSansSerif">Code anzeigen</label>
+            <section class="code secSansSerif">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="sansSerif"&gt
+                            Beispieltext mit Sans-serif-Schriftart.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .sansSerif {
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-family: 'Courier New', Courier, monospace;</code>
+            </p>
+            <section class="beispiele">
+                <p class="monospace">
+                    Beispieltext mit Monospace-Schriftart.
+                </p>
+            </section>
+            <input id="checkMonospace" type="checkbox" name="menu" />
+            <label for="checkMonospace">Code anzeigen</label>
+            <section class="code secMonospace">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="monospace"&gt
+                            Beispieltext mit Monospace-Schriftart.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .monospace {
+                            font-family: 'Courier New', Courier, monospace;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-family: 'Brush Script MT';</code>
+            </p>
+            <section class="beispiele">
+                <p class="kursiv">
+                    Beispieltext mit Kursivschriftart.
+                </p>
+            </section>
+            <input id="checkKursiv" type="checkbox" name="menu" />
+            <label for="checkKursiv">Code anzeigen</label>
+            <section class="code secKursiv">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="kursiv"&gt
+                            Beispieltext mit Kursivschriftart.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .kursiv {
+                            font-family: 'Brush Script MT';
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-family: papyrus, Jokerman;</code>
+            </p>
+            <section class="beispiele">
+                <p class="fantasy">
+                    Beispieltext mit Fantasy-Schriftart.
+                </p>
+            </section>
+            <input id="checkFantasy" type="checkbox" name="menu" />
+            <label for="checkFantasy">Code anzeigen</label>
+            <section class="code secFantasy">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="fantasy"&gt
+                            Beispieltext mit Fantasy-Schriftart.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .fantasy {
+                            font-family: papyrus, Jokerman;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>
+                font-size
+            </h2>
+            <p>
+                Mit <code>font-size</code> kann man die Größe der Schrift verändern, hierbei gibt es mehrere
+                Möglichkeiten:
+                <ul>
+                    <li>px - Pixel</li>
+                    <li>em - So groß wie ein großes M im Eltern-Element groß ist</li>
+                    <li>rem - So groß wie ein großes M im Root-Element (html) groß ist</li>
+                </ul>
+            </p>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-size: 24px;</code>
+            </p>
+            <section class="beispiele" id="size">
+                <p class="fontPx">
+                    Text mit 24 Pixel Schriftgröße.
+                </p>
+            </section>
+            <input id="checkFontPx" type="checkbox" name="menu" />
+            <label for="checkFontPx">Code anzeigen</label>
+            <section class="code secFontPx">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="fontPx"&gt
+                            Text mit 24 Pixel Schriftgröße.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .fontPx {
+                            font-size: 24px;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-size: 1.5em;</code>
+            </p>
+            <section class="beispiele">
+                <p class="fontEm">
+                    Text hat 1.5em Schriftgröße und Elternelement 16 Pixel.
+                </p>
+            </section>
+            <input id="checkFontEm" type="checkbox" name="menu" />
+            <label for="checkFontEm">Code anzeigen</label>
+            <section class="code secFontEm">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="fontEm"&gt
+                            Text hat 1.5em Schriftgröße und Elternelement 16 Pixel.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section:has(p.fontEm) {
+                            font-size: 16px;
+                        }
+                        .fontEm{
+                            font-size: 1.5em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-size: 1.5rem;</code>
+            </p>
+            <section class="beispiele">
+                <p class="fontRem">
+                    Text hat 1.5rem Schriftgröße und Root-Element 20px.
+                </p>
+            </section>
+            <input id="checkFontRem" type="checkbox" name="menu" />
+            <label for="checkFontRemc">Code anzeigen</label>
+            <section class="code secFontRem">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="fontRem"&gt
+                            Text hat 1.5rem Schriftgröße und Root-Element 20px.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .fontRem {
+                            font-size: 1.5rem;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>
+                font-style
+            </h2>
+            <p>
+                Es gibt drei verschiedene <code>Font-Style</code>:
+                <ul>
+                    <li>normal - normale Schrift, default</li>
+                    <li>italic (Kursiv) <code>font-style: italic;</code> - wird verwendet, um
+                        den Text kursiv darzustellen. Dies bezieht sich auf eine spezifische kursive Schriftartvariante.
+                    </li>
+                    <li>oblique (Schräg) <code>font-style: oblique;</code> - wird verwendet, um
+                        den Text schräg darzustellen. Im Gegensatz zu <code>italic</code> neigt <code>oblique</code> die
+                        Buchstaben in normalen Schriftarten ohne eine spezielle kursive Variante.</li>
+                </ul>
+            </p>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-style: italic;</code>
+            </p>
+            <section class="beispiele">
+                <p class="fontItalic">
+                    Kursiver Text.
+                </p>
+            </section>
+            <input id="checkFontItalic" type="checkbox" name="menu" />
+            <label for="checkFontItalic">Code anzeigen</label>
+            <section class="code secFontItalic">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="fontItalic"&gt
+                            Kursiver Text.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .fontItalic {
+                            font-style: italic;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-style: oblique;</code>
+            </p>
+            <section class="beispiele">                
+                <p class="fontOblique">
+                    Schräger Text.
+                </p>
+            </section>
+            <input id="checkFontOblique" type="checkbox" name="menu" />
+            <label for="checkFontOblique">Code anzeigen</label>
+            <section class="code secFontOblique">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="fontOblique"&gt
+                            Schräger Text.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .fontOblique {
+                            font-style: oblique;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>
+                font-weight
+            </h2>
+            <p>
+                <code>Font-Weight</code> wird verwendet, um die Gewichtung oder Dicke der Schriftart zu steuern.
+                Man kann es mit lighter, light, normal, bold, bolder oder in 100er-Schritten angeben.
+            </p>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-weight: normal;</code>
+            </p>
+            <section class="beispiele">
+                <p class="fontNormal">
+                    Normaler Text.
+                </p>
+            </section>
+            <input id="checkFontNormal" type="checkbox" name="menu" />
+            <label for="checkFontNormal">Code anzeigen</label>
+            <section class="code secFontNormal">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="fontNormal"&gt
+                            Normaler Text.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .fontNormal {
+                            font-weight: normal;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>font-weight: bold;</code>
+            </p>
+            <section class="beispiele">                
+                <p class="fontBold">
+                    Fetter Text.
+                </p>
+            </section>
+            <input id="checkFontBold" type="checkbox" name="menu" />
+            <label for="checkFontBold">Code anzeigen</label>
+            <section class="code secFontBold">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                         &ltp class="fontBold"&gt
+                            Fetter Text.
+                         &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .fontBold {
+                            font-weight: bold;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>
+                text-transform
+            </h2>
+            <p>
+                Mithilfe von <code>text-transform</code> können z.B. ganze &lt;p&gt Tags groß geschrieben werden.
+            </p>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-transform: uppercase;</code>
+            </p>
+            <section class="beispiele">
+                <p class="uppercase">
+                    alles innerhalb dieses Paragraphen wurde klein geschrieben und mit
+                    <code>text-transform: uppercase;</code> wird alles in caps geändert.
+                </p>
+            </section>
+            <input id="checkUppercase" type="checkbox" name="menu" />
+            <label for="checkUppercase">Code anzeigen</label>
+            <section class="code secUppercase">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="uppercase"&gt
+                            alles innerhalb dieses Paragraphen wurde klein geschrieben und mit
+                            &ltcode&gttext-transform: uppercase;&lt/code&gt wird alles in caps geändert.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .uppercase {
+                            text-transform: uppercase;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-transform: capitalize;</code>
+            </p>
+            <section class="beispiele">
+                <p class="capitalize">
+                    alles innerhalb dieses Paragraphen wurde klein geschrieben und mit
+                    <code>text-transform: capitalize;</code> wird jeder erste buchstabe jedes wortes großgeschrieben.
+                </p>
+            </section>
+            <input id="checkCapitalize" type="checkbox" name="menu" />
+            <label for="checkCapitalize">Code anzeigen</label>
+            <section class="code secCapitalize">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="capitalize"&gt
+                            alles innerhalb dieses Paragraphen wurde klein geschrieben und mit
+                            &ltcode&gttext-transform: capitalize;&lt/code&gt wird jeder erste buchstabe jedes wortes großgeschrieben.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .capitalize {
+                            text-transform: capitalize;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-transform: lowercase;</code>
+            </p>
+            <section class="beispiele">
+                <p class="lowercase">
+                    ALLES INNERHALB DIESES PARAGRAPHEN WURDE GROß GESCHRIEBEN UND MIT
+                    <code>text-transform: lowercase;</code> WIRD ALLES IN LOWERCASE GEÄNDERT.
+                </p>
+            </section>
+            <input id="checkLowercase" type="checkbox" name="menu" />
+            <label for="checkLowercase">Code anzeigen</label>
+            <section class="code secLowercase">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="lowercase"&gt
+                            ALLES INNERHALB DIESES PARAGRAPHEN WURDE GROß GESCHRIEBEN UND MIT
+                            &ltcode&gttext-transform: lowercase;&lt/code&gt WIRD ALLES IN LOWERCASE GEÄNDERT.
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .lowercase {
+                            text-transform: lowercase;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>
+                text-decoration
+            </h2>
+            <p>
+                Mit <code>text-decoration</code> kann man eine Linie über, unter oder durch einen Text ziehen. Diese
+                drei Möglichkeiten lassen sich auch miteinander kombinieren und mit Farben und Linienart verändern.
+                Es gibt folgene Möglichkeiten
+                <ul>
+                    <li>overline - Linie über dem Text</li>
+                    <li>underline - Linie unter dem Text</li>
+                    <li>line-through - Linie durch den Text</li>
+                </ul>
+                Zusätzlich gibt es diese Linienarten:
+                <ul>
+                    <li>solid - normale Linie</li>
+                    <li>double - doppelte Linie</li>
+                    <li>dashed - gestrichelte Linie</li>
+                    <li>dotted - gepunktete Linie</li>
+                    <li>wavy - gewellte Linie</li>
+                </ul>
+            </p>
+            
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-decoration: underline;</code>
+            </p>
+            <section class="beispiele">
+                <h3 class="underline">
+                    Unterstrichener Text
+                </h3>
+                <p>
+                    mit <code>text-decoration: underline;</code>
+                </p>
+            </section>
+            <input id="checkUnderline" type="checkbox" name="menu" />
+            <label for="checkUnderline">Code anzeigen</label>
+            <section class="code secUnderline">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                         &lth3 class="underline"&gt
+                            Unterstrichener Text
+                         &lt/h3&gt
+                         &ltp&gt
+                            mit  &ltcode&gttext-decoration: underline; &lt/code&gt
+                         &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .underline {
+                            text-decoration: underline;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-decoration: underline overline line-through;</code>
+            </p>
+            <section class="beispiele">
+                <h3 class="allLine">
+                    Unter,- durch- und überstrichener Text
+                </h3>
+                <p>
+                    mit <code>text-decoration: underline overline line-through;</code>
+                </p>
+            </section>
+            <input id="checkAllLine" type="checkbox" name="menu" />
+            <label for="checkAllLine">Code anzeigen</label>
+            <section class="code secAllLine">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &lth3 class="allLine"&gt
+                            Unter,- durch- und überstrichener Text
+                        &lt/h3&gt
+                        &ltp&gt
+                            mit &ltcode&gttext-decoration: underline overline line-through;&lt/code&gt
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .allLine {
+                            text-decoration: underline overline line-through;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-decoration: underline overline line-through dashed;</code>
+            </p>
+            <section class="beispiele">
+                <h3 class="dashedLine">
+                    Unter,- durch- und überstrichener Text mit gestrichelter Linie
+                </h3>
+                <p>
+                    mit <code>text-decoration: underline overline line-through dashed;</code>
+                </p>
+            </section>
+            <input id="checkDashedLine" type="checkbox" name="menu" />
+            <label for="checkDashedLine">Code anzeigen</label>
+            <section class="code secDashedLine">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &lth3 class="dashedLine"&gt
+                            Unter,- durch- und überstrichener Text mit gestrichelter Linie
+                        &lt/h3&gt
+                        &ltp&gt
+                            mit &ltcode&gttext-decoration: underline overline line-through dashed;&lt/code&gt
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .dashedLine {
+                            text-decoration: underline overline line-through dashed;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-decoration: underline overline line-through red dashed;</code>
+            </p>
+            <section class="beispiele">
+                <h3 class="redLined">
+                    Unter,- durch- und überstrichener Text mit gestrichelter Linie und farblich geändert
+                </h3>
+                <p>
+                    mit <code>text-decoration: underline overline line-through red dashed;</code>
+                </p>
+            </section>
+            <input id="checkRedLined" type="checkbox" name="menu" />
+            <label for="checkRedLined">Code anzeigen</label>
+            <section class="code secRedLined">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &lth3 class="redLined"&gt
+                            Unter,- durch- und überstrichener Text mit gestrichelter Linie und farblich geändert
+                        &lt/h3&gt
+                        &ltp&gt
+                            mit &ltcode&gttext-decoration: underline overline line-through red dashed;&lt/code&gt
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .redLined {
+                            text-decoration: underline overline line-through red dashed;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>
+                text-shadow
+            </h2>
+            <p>
+                <code>text-shadow</code> gibt dem Text, wie der Name schon sagt, einen Schatten. Dieser benötigt
+                folgende Werte in Reihenfolge:
+            <ol>
+                <li>Horizontaler-Offset: positiv nach rechts, negativ nach links.</li>
+                <li>Vertikaler-Offset: positiv nach unten, negativ nach oben.</li>
+                <li>Blur-Radius: optional, je größer, desto unschärfer.</li>
+                <li>Basis-Farbe: in verschiedenen Formaten wie Hex, RGB, RGBA, HSL.</li>
+            </ol>
+            </p>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-shadow: 2px 2px rgb(120, 120, 120);</code>
+            </p>
+            <section class="beispiele">
+                <p class="botRight">
+                    <code>text-shadow: 2px 2px rgb(120, 120, 120);</code> - Schatten wird nach unten rechts geworfen
+                </p>
+            </section>
+            <input id="checkBotRight" type="checkbox" name="menu" />
+            <label for="checkBotRight">Code anzeigen</label>
+            <section class="code secBotRight">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="botRight"&gt
+                            &ltcode&gttext-shadow: 2px 2px rgb(120, 120, 120);&lt/code&gt - Schatten wird nach unten rechts geworfen
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .botRight {
+                            text-shadow: 2px 2px rgb(120, 120, 120);
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-shadow: -2px -2px 2px rgb(120, 120, 120);</code>
+            </p>
+            <section class="beispiele">
+                <p class="topLeft">
+                    <code>text-shadow: -2px -2px 2px rgb(120, 120, 120);</code> - Schatten wird nach oben links geworfen
+                    und ist etwas unscharf
+                </p>
+            </section>
+            <input id="checkTopLeft" type="checkbox" name="menu" />
+            <label for="checkTopLeft">Code anzeigen</label>
+            <section class="code secTopLeft">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="topLeft"&gt
+                            &ltcode&gttext-shadow: -2px -2px 2px rgb(120, 120, 120);&lt/code&gt - Schatten wird nach oben links geworfen
+                            und ist etwas unscharf
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .topLeft {
+                            text-shadow: -2px -2px 2px rgb(120, 120, 120);
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+        <article>
+            <h2>
+                text-align
+            </h2>
+            <p>
+                <code>text-align</code> lässt den Text ausrichten. Es gibt vier Möglichkeiten:
+            <ol>
+                <li>center - zentriert den Text</li>
+                <li>justify - erzeugt Blocksatz</li>
+                <li>right - rechtsbündig</li>
+                <li>left - linksbündig</li>
+            </ol>
+            </p>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-align: center;</code>
+            </p>
+            <section class="beispiele">
+                <p class="textCenter"><b class="umbruch">Zentriert</b>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Doloremque quis sit sint atque, dicta similique quaerat ipsam distinctio praesentium animi
+                    perspiciatis corrupti, soluta accusamus debitis reprehenderit quos dolor, quas placeat.
+                </p>
+            </section>
+            <input id="checkTextCenter" type="checkbox" name="menu" />
+            <label for="checkTextCenter">Code anzeigen</label>
+            <section class="code secTextCenter">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="textCenter"&gt&ltb class="umbruch"&gtZentriert&lt/b&gtLorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Doloremque quis sit sint atque, dicta similique quaerat ipsam distinctio praesentium animi
+                            perspiciatis corrupti, soluta accusamus debitis reprehenderit quos dolor, quas placeat.
+                        &lt/p>&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .textCenter {
+                            text-align: center;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-align: justify;</code>
+            </p>
+            <section class="beispiele">
+                <p class="textJustify"><b class="umbruch">Blocksatz</b>Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. A quia sit, commodi ad eius in sed obcaecati dolore provident beatae ut nobis nemo, sint, amet
+                    illo! Quaerat rem voluptates laborum!
+                </p>
+            </section>
+            <input id="checkTextJustify" type="checkbox" name="menu" />
+            <label for="checkTextJustify">Code anzeigen</label>
+            <section class="code secTextJustify">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="textJustify"&gt&ltb class="umbruch"&gtBlocksatz&lt/b&gtLorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. A quia sit, commodi ad eius in sed obcaecati dolore provident beatae ut nobis nemo, sint, amet
+                            illo! Quaerat rem voluptates laborum!
+                        &lt/p&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .textJustify {
+                            text-align: justify;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-align: right;</code>
+            </p>
+            <section class="beispiele">
+                <p class="textRight"><b class="umbruch">Rechtsbündig</b>Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Incidunt mollitia corrupti temporibus expedita hic libero laudantium exercitationem delectus
+                    dolores, quaerat, nulla reiciendis ipsa error sequi, necessitatibus facilis enim amet cupiditate?
+                </p>
+            </section>
+            <input id="checkTextRight" type="checkbox" name="menu" />
+            <label for="checkTextRight">Code anzeigen</label>
+            <section class="code secTextRight">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="textRight"&gt&ltb class="umbruch"&gtRechtsbündig&lt/b&gtLorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Incidunt mollitia corrupti temporibus expedita hic libero laudantium exercitationem delectus
+                            dolores, quaerat, nulla reiciendis ipsa error sequi, necessitatibus facilis enim amet cupiditate?
+                            &lt/p&gt
+
+                        
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .textRight {
+                            text-align: right;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+
+            <p>
+                Mit <code>text-align: left;</code>
+            </p>
+            <section class="beispiele">
+                <p class="textLeft">
+                    <b class="umbruch">Linksbündig</b>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Eius voluptas, ullam harum obcaecati fugit enim atque ipsum est. Inventore praesentium, cum
+                    provident blanditiis culpa fugiat accusamus dolore facilis aspernatur quibusdam.
+                </p>   
+            </section>
+            <input id="checkTextLeft" type="checkbox" name="menu" />
+            <label for="checkTextLeft">Code anzeigen</label>
+            <section class="code secTextLeft">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltp class="textLeft"p&gt
+                        &ltb class="umbruch"p&gtLinksbündig&lt/bp&gtLorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Eius voluptas, ullam harum obcaecati fugit enim atque ipsum est. Inventore praesentium, cum
+                            provident blanditiis culpa fugiat accusamus dolore facilis aspernatur quibusdam.
+                            &lt/p&gt   
+
+                        
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        .textLeft {
+                            text-align: left;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+    </main>
+    <aside class="right">
+        
+    </aside>
+    <footer>
+        <a href="#h1">nach Oben</a>
+    </footer>
+</body>
+</html>

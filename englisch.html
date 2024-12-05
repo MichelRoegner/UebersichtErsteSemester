@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/styleMain.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fachenglisch</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <img src="images/HSFL_Logo_weiss.png" alt="">
+            <a href="index.html" class="active">Startseite</a>
+            <div id="myLinks">
+                <div id="firstSemester" class="dropdown">
+                    <div>1.Semester</div>
+                    <div id="firstSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="iid.html">Interface und Interaktionsdesign</a>
+                            </li>
+                            <li>
+                                <a href="strukprog.html">Strukturierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="englisch.html">Fachenglisch</a>
+                            </li>
+                            <li>
+                                <a href="cabs.html">Computerarchitektur und Betriebssysteme</a>
+                            </li>
+                            <li>
+                                <a href="webdes.html">Webdesign</a>
+                            </li>
+                            <li>
+                                <a href="mathe1.html">Mathematik 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="secondSemester" class="dropdown">
+                    <div>2.Semester</div>
+                    <div id="secondSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="bwl.html">Betriebswirtschaftslehre</a>
+                            </li>
+                            <li>
+                                <a href="webtech.html">Web-Technologien</a>
+                            </li>
+                            <li>
+                                <a href="ute.html">Usability Testing & Engineering</a>
+                            </li>
+                            <li>
+                                <a href="oop.html">Objektorientierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="cone.html">Computernetze / Netzwerkkommunikation</a>
+                            </li>
+                            <li>
+                                <a href="kop.html">Kommunikation und Präsentation</a>
+                            </li>
+                            <li>
+                                <a href="mathe2.html">Mathematik 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="dropdown()">
+            <div class="container" onclick="change(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </a>
+        </nav>
+        <h1>Fachenglisch</h1>
+    </header>
+
+    <aside id="left">
+
+    </aside>
+
+    <main>
+        <section>
+            <h2>Übersicht</h2>
+            <p>Das Modul „Fachenglisch“ bietet eine praxisorientierte Plattform, 
+                um Sprachkenntnisse für akademische und berufliche Zwecke zu 
+                vertiefen. Studierende lernen, präzise und effektiv auf Englisch 
+                zu kommunizieren, wissenschaftliche Texte zu analysieren 
+                und Positionen zu vertreten.</p>
+        </section>
+        <section>
+            <h2>Inhalte</h2>
+            <p>
+                <ul>
+                    <li>
+                        Zitationsregeln und korrekter Umgang mit Quellenangaben.
+                    </li>
+                    <li>
+                        Verwendung akademischer Ausdrucksweisen und Vermeidung von Umgangssprache.
+                    </li>
+                    <li>
+                        Gap-Fill-Aufgaben zur Festigung des Fachvokabulars.
+                    </li>
+                    <li>
+                        Satzumwandlungen, um grammatikalische Fähigkeiten zu verbessern.
+                    </li>
+                    <li>
+                        Erstellung und Strukturierung eines Position Papers.
+                    </li>
+                    <li>
+                        Entwicklung und Vortrag eines Themas zu einem selbst gewählten Thema mit IT-Bezug.
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <h2>Ablauf</h2>
+            <h3>Erster Teil: Übungseinheit</h3>
+            <ul>
+                <li>Bearbeitung von Aufgaben wie Gap-Fill, Textanalyse oder Satzumwandlungen.</li>
+                <li>Diskussion und Besprechung zur Klärung von Unklarheiten und Vertiefung der Inhalte.</li>
+            </ul>
+            <br>
+            <h3>Zweiter Teil: Präsentationen</h3>             
+            <ul>
+                <li>Zwei Teilnehmende halten ihre Vorträge.</li>
+                <li>Diskussion und Feedback durch die Gruppe.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Beispiel</h2>
+            <p>
+                <img src="images/englisch.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </p>
+        </section>
+    </main>
+
+    <aside id="right">
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function dropdown() {
+            let links = document.getElementById("myLinks");
+            links.style.display = links.style.display === "block" ? "none" : "block";
+        }
+
+        function change(x) {
+            x.classList.toggle("change");
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style/styleMain.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computernetze / Netzwerkkommunikation</title>
+</head>
+
+<body>
+    <header>
+        <nav class="topnav">
+            <img src="images/HSFL_Logo_weiss.png" alt="">
+            <a href="index.html" class="active">Startseite</a>
+            <div id="myLinks">
+                <div id="firstSemester" class="dropdown">
+                    <div>1.Semester</div>
+                    <div id="firstSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="iid.html">Interface und Interaktionsdesign</a>
+                            </li>
+                            <li>
+                                <a href="strukprog.html">Strukturierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="englisch.html">Fachenglisch</a>
+                            </li>
+                            <li>
+                                <a href="cabs.html">Computerarchitektur und Betriebssysteme</a>
+                            </li>
+                            <li>
+                                <a href="webdes.html">Webdesign</a>
+                            </li>
+                            <li>
+                                <a href="mathe1.html">Mathematik 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="secondSemester" class="dropdown">
+                    <div>2.Semester</div>
+                    <div id="secondSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="bwl.html">Betriebswirtschaftslehre</a>
+                            </li>
+                            <li>
+                                <a href="webtech.html">Web-Technologien</a>
+                            </li>
+                            <li>
+                                <a href="ute.html">Usability Testing & Engineering</a>
+                            </li>
+                            <li>
+                                <a href="oop.html">Objektorientierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="cone.html">Computernetze / Netzwerkkommunikation</a>
+                            </li>
+                            <li>
+                                <a href="kop.html">Kommunikation und Präsentation</a>
+                            </li>
+                            <li>
+                                <a href="mathe2.html">Mathematik 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="dropdown()">
+                <div class="container" onclick="change(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </a>
+        </nav>
+        <h1>Computernetze / Netzwerkkommunikation</h1>
+    </header>
+
+    <aside id="left">
+
+    </aside>
+
+    <main>
+        <section>
+            <h2>Übersicht</h2>
+            <p>Das Modul "Computernetze und Netzwerkkommunikation"
+                vermittelt die Grundlagen der Netzwerktechnologie,
+                die Architektur und die Kommunikation zwischen Netzwerken.
+                Es umfasst sowohl theoretische Konzepte als auch praktische
+                Übungen mit Tools und Simulationen.</p>
+        </section>
+        <section>
+            <h2>Inhalte</h2>
+            <ul>
+                <li><strong>Netzwerkschichten:</strong> OSI-Modell und TCP/IP-Stack.</li>
+                <li><strong>Protokolle:</strong> HTTP, FTP, SMTP, DNS und IP.</li>
+                <li><strong>Sicherheitsmechanismen:</strong> TLS, Verschlüsselung und Authentifizierung.</li>
+                <li><strong>Tools:</strong> Wireshark, Ping, Traceroute, Telnet.</li>
+                <li><strong>Angriffe und Schutz:</strong> ARP-Spoofing, IP-Spoofing, Denial-of-Service.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ablauf</h2>
+            <ul>
+                <li><strong>Theoretische Grundlagen:</strong>
+                    <ul>
+                        <li>Netzwerkadressierung und Protokollanalyse.</li>
+                        <li>Protokollstrukturen und -anwendungen.</li>
+                    </ul>
+                </li>
+                <li><strong>Praktische Übungen:</strong>
+                    <ul>
+                        <li>Analyse von Netzwerkverkehr mit Wireshark.</li>
+                        <li>Simulation von DNS- und Mail-Servern.</li>
+                        <li>Erstellung und Einsatz von SSL-Zertifikaten.</li>
+                        <li>Implementierung eines einfachen DNS-Servers.</li>
+                        <li>Entwicklung eines sicheren Webservers mit TLS.</li>
+                        <li>Erstellung eines Netzwerkprotokollsimulators.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ziele des Moduls</h2>
+            <p>Studierende sollen ein fundiertes Verständnis für Netzwerktechnologien
+                und deren Anwendung in der Praxis entwickeln. Ziel ist es, Netzwerke
+                zu konfigurieren, zu analysieren und gegen potenzielle Angriffe zu schützen.</p>
+        </section>
+        <section>
+            <h2>Beispiel</h2>
+            <p>
+                Nach der Information wie viele Ports geschlossen sind folgt eine
+                Auflistung an offenen Ports und Diensten.
+                Bei der Eingabe für das gesamte Netzwerk
+            </p>
+            <p>
+                • nmap 192.168.0.0/24
+            </p>
+            <p>
+                werden alle aktiven Server im gesamten Netzwerk angezeigt und über
+                welche IP diese laufen.
+                Für jeden Server ist auch hier aufgelistet welche Server geschlossen und
+                offen sind und welche Dienste für die offenen angeboten werden.
+            </p>
+            <p>
+                <img src="images/cone.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </p>
+        </section>
+    </main>
+
+    <aside id="right">
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function dropdown() {
+            let links = document.getElementById("myLinks");
+            links.style.display = links.style.display === "block" ? "none" : "block";
+        }
+
+        function change(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+
+</html>

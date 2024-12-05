@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/styleMain.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematik 2</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <img src="images/HSFL_Logo_weiss.png" alt="">
+            <a href="index.html" class="active">Startseite</a>
+            <div id="myLinks">
+                <div id="firstSemester" class="dropdown">
+                    <div>1.Semester</div>
+                    <div id="firstSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="iid.html">Interface und Interaktionsdesign</a>
+                            </li>
+                            <li>
+                                <a href="strukprog.html">Strukturierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="englisch.html">Fachenglisch</a>
+                            </li>
+                            <li>
+                                <a href="cabs.html">Computerarchitektur und Betriebssysteme</a>
+                            </li>
+                            <li>
+                                <a href="webdes.html">Webdesign</a>
+                            </li>
+                            <li>
+                                <a href="mathe1.html">Mathematik 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="secondSemester" class="dropdown">
+                    <div>2.Semester</div>
+                    <div id="secondSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="bwl.html">Betriebswirtschaftslehre</a>
+                            </li>
+                            <li>
+                                <a href="webtech.html">Web-Technologien</a>
+                            </li>
+                            <li>
+                                <a href="ute.html">Usability Testing & Engineering</a>
+                            </li>
+                            <li>
+                                <a href="oop.html">Objektorientierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="cone.html">Computernetze / Netzwerkkommunikation</a>
+                            </li>
+                            <li>
+                                <a href="kop.html">Kommunikation und Präsentation</a>
+                            </li>
+                            <li>
+                                <a href="mathe2.html">Mathematik 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="dropdown()">
+            <div class="container" onclick="change(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </a>
+        </nav>
+        <h1>Mathematik 2</h1>
+    </header>
+
+    <aside id="left">
+
+    </aside>
+
+    <main>
+        <section>
+            <h2>Übersicht</h2>
+            <p>Das Modul "Mathematik 2" erweitert die Grundlagen aus Mathematik 1 
+                und vertieft das Wissen in Bereichen wie Folgen, Differentialrechnung, 
+                Integralrechnung und Wahrscheinlichkeitstheorie.</p>
+        </section>
+        <section>
+            <h2>Inhalte</h2>
+            <ul>
+                    <li>Einführung in Grenzwerte und Differenzenrechnung.</li>
+                    <li>Vertiefung der Integralrechnung und Integrationstechniken.</li>
+                </ul>
+                <b>Praktische Übungen:</b>
+                <ul>
+                    <li>Berechnung von Summen und Reihen.</li>
+                    <li>Anwendung der Wahrscheinlichkeitsregeln auf reale Beispiele.</li>
+                </ul>
+        </section>
+        <section>
+            <h2>Ablauf</h2>
+            <ul>
+                <li>Einführung in Grenzwerte und Differenzenrechnung.</li>
+                <li>Vertiefung der Integralrechnung und Integrationstechniken.</li>
+            </ul>
+            <b>Praktische Übungen:</b>
+            <ul>
+                <li>Berechnung von Summen und Reihen.</li>
+                <li>Anwendung der Wahrscheinlichkeitsregeln auf reale Beispiele.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ziele des Moduls</h2>
+            <p>Das Modul vermittelt den Studierenden ein tiefergehendes Verständnis 
+                mathematischer Konzepte und deren Anwendung in Informatik und 
+                Naturwissenschaften. Ziel ist es, analytische Fähigkeiten zu stärken 
+                und mathematische Methoden in Problemlösungen zu integrieren.</p>
+        </section>
+        <section>
+            <h2>Beispiel</h2>
+            <p>
+                Eines der Kommunikationsmodelle
+            </p>
+            <p>
+                <img src="images/mathe2a.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </p>
+            <p>
+                <img src="images/mathe2b.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </p>
+            <p>
+                <img src="images/mathe2c.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </p>
+        </section>
+    </main>
+
+    <aside id="right">
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function dropdown() {
+            let links = document.getElementById("myLinks");
+            links.style.display = links.style.display === "block" ? "none" : "block";
+        }
+
+        function change(x) {
+            x.classList.toggle("change");
+        }
+        </script>
+</body>
+</html>

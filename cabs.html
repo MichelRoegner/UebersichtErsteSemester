@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/styleMain.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computerarchitektur und Betriebssysteme</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <img src="images/HSFL_Logo_weiss.png" alt="">
+            <a href="index.html" class="active">Startseite</a>
+            <div id="myLinks">
+                <div id="firstSemester" class="dropdown">
+                    <div>1.Semester</div>
+                    <div id="firstSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="iid.html">Interface und Interaktionsdesign</a>
+                            </li>
+                            <li>
+                                <a href="strukprog.html">Strukturierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="englisch.html">Fachenglisch</a>
+                            </li>
+                            <li>
+                                <a href="cabs.html">Computerarchitektur und Betriebssysteme</a>
+                            </li>
+                            <li>
+                                <a href="webdes.html">Webdesign</a>
+                            </li>
+                            <li>
+                                <a href="mathe1.html">Mathematik 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="secondSemester" class="dropdown">
+                    <div>2.Semester</div>
+                    <div id="secondSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="bwl.html">Betriebswirtschaftslehre</a>
+                            </li>
+                            <li>
+                                <a href="webtech.html">Web-Technologien</a>
+                            </li>
+                            <li>
+                                <a href="ute.html">Usability Testing & Engineering</a>
+                            </li>
+                            <li>
+                                <a href="oop.html">Objektorientierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="cone.html">Computernetze / Netzwerkkommunikation</a>
+                            </li>
+                            <li>
+                                <a href="kop.html">Kommunikation und Präsentation</a>
+                            </li>
+                            <li>
+                                <a href="mathe2.html">Mathematik 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="dropdown()">
+            <div class="container" onclick="change(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </a>
+        </nav>
+        <h1>Computerarchitektur und Betriebssysteme</h1>
+    </header>
+
+    <aside id="left">
+
+    </aside>
+
+    <main>
+        <section>
+            <h2>Übersicht</h2>
+            <p>
+                Das Modul vermittelt die Grundlagen moderner Computersysteme und 
+                Betriebssysteme. Studierende lernen, wie Hard- und Software 
+                aufeinander abgestimmt sind, und setzen Theorie in praktischen 
+                Laborübungen um. Themen wie digitale Logik, Zahlensysteme und 
+                Hardwarearchitekturen werden vertieft behandelt.
+            </p>
+        </section>
+        <section>
+            <h2>Inhalte</h2>
+            <p>
+                <ul>
+                    <li>
+                        Flynn’s Klassifikation von Parallelitätsmodellen (z. B. MIMD für Mehrkernprozessoren).
+                    </li>
+                    <li>
+                        Hardwarebestandteile: Prozessor, Speicher und Bussysteme.
+                    </li>
+                    <li>
+                        Boolesche Algebra (AND, OR, NOT) und Vereinfachung durch Karnaugh-Diagramme.
+                    </li>
+                    <li>
+                        Zweierkomplement und Overflow-Management in der Arithmetik.
+                    </li>
+                    <li>
+                        Praktischer Einsatz von Linux-Shell-Kommandos wie ls, chmod und grep.
+                    </li>
+                    <li>
+                        Prozesse steuern, Dateisysteme verwalten und Scripts erstellen.
+                    </li>
+                    <li>
+                        Umsetzung von Dezimalzahlen in Binär- oder Hexadezimalzahlen.
+                    </li>
+                    <li>
+                        Gleitkommazahlen nach IEEE-754-Standard (inklusive Normierung und Fehlerbetrachtung).
+                    </li>
+                </ul>
+
+            </p>
+        </section>
+        <section>
+            <h2>Ablauf</h2>
+            <ul>
+                <li>
+                    <strong>Theoretische Einführung:</strong>
+                    <ul>
+                        <li>Vorlesungen zu Themen wie Hardwarearchitektur, digitale Logik und Betriebssystemkonzepte.</li>
+                        <li>Vorstellung von Modellen und Standards wie Flynn’s Klassifikation und IEEE-754.</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <strong>Laborübungen:</strong>
+                    <ul>
+                        <li>Praktische Anwendung der Theorie durch Schaltungsdesign mit Quartus und FPGA.</li>
+                        <li>Durchführung von Übungen wie der Berechnung mit Dualzahlen und der Simulation von digitalen Systemen.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Beispiel</h2>
+            <p>
+                <img src="images/cabs.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </p>
+        </section>
+    </main>
+
+    <aside id="right">
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function dropdown() {
+            let links = document.getElementById("myLinks");
+            links.style.display = links.style.display === "block" ? "none" : "block";
+        }
+
+        function change(x) {
+            x.classList.toggle("change");
+        }
+        </script>
+</body>
+</html>

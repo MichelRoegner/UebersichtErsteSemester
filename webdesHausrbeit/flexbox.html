@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/flexStyle.css">
+    <link rel="shortcut icon" href="Icon/Icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="h1">FlexBox</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" title="Startseite" class="notActive"></a>
+                </li>
+                <li>
+                    <a href="textstyle.html" title="Text-Styling mit CSS" class="notActive"></a>
+                </li>
+                <li>
+                    <a href="gridlayout.html" title="Grid-Layout" class="notActive"></a>
+                </li>
+                <li>
+                    <a href="flexbox.html" title="Flex-Layout" class="active"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="left">
+
+    </aside>
+    <main>
+
+        <article>
+            <h2>Intro</h2>
+            <p>
+                Flexbox ist eine Layout-Methode um auf einer Website
+                Elemente anzuordnen.
+            </p>
+            <br>
+            <p>
+                Dies ermöglicht simple responsive Layouts zu erstellen, indem
+                Elemente beliebig auf der horizontalen und vertikalen Achse
+                angeordnet werden können.
+            </p>
+            <br>
+            <p>
+                Weiter ist es möglich die Anordnung umzukehren oder auch einzelne
+                Elemente beliebig zu verschieben.
+            </p>
+        </article>
+
+
+        <article>
+            <h2>flex</h2>
+            <p>
+                In dem Eltern-Element wird das mittels <code>display:flex;</code> die Art der
+                Ansicht geändert. Ohne weiteren Zusatz werden die Kind-Elemente jetzt
+                nebeneinander angezeigt
+            </p>
+            <br>
+            <p>
+                Mit <code>display:flex;</code>
+            </p>
+            <section class="flexAnordnung">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkFlexAnordnung" type="checkbox" name="menu" />
+            <label for="checkFlexAnordnung">Code anzeigen</label>
+            <section class="code secFlexAnordnung">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+
+                    <pre>
+                        &ltsection class="flexAnordnung"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.flexAnordnung {
+                            background-color: white;
+                            padding: 1em;
+                            display: flex;
+                        }
+                        section.flexAnordnung > p {
+                            background-color: orange;
+                            margin: .5em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Ohne <code>display:flex;</code>
+            </p>
+            <section class="noFlexAnordnung">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkNoFlexAnordnung" type="checkbox" name="menu" />
+            <label for="checkNoFlexAnordnung">Code anzeigen</label>
+            <section class="code secNoFlexAnordnung">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="noFlexAnordnung"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section {
+                            background-color: white;
+                            padding: 1em;
+                            border: 2px solid black;
+                        }
+                        section > p {
+                            font-size: 2em;
+                            background-color: orange;
+                            margin: .5em;
+                            text-align: center;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>flex-direction</h2>
+            <p>
+                Jetzt wird zusätzlich zu <code>display:grid;</code> noch die <code>flex-direction</code>
+                hinzugefügt. der Standard ist <code>flex-direction: row;</code> und muss nicht zwingend hinzugefügt werden.
+                Diese Anordnung kann auch umgekehr werden mit <code>flex-direction: row-reverse;</code>. Die zweite Art der 
+                Anordnung ist <code>flex-direction: column;</code> hier werden die Kind-Elemente als Blockelemente dargestellt
+                auch dies kann umgekehrt werden mit <code>flex-direction: column reverse;</code>.
+            </p>
+            <br>
+            <p>
+                Mit <code>flex-direction: row;</code>
+            </p>
+            <section class="dirRow">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkdirRow" type="checkbox" name="menu" />
+            <label for="checkdirRow">Code anzeigen</label>
+            <section class="code seccDirRow">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="dirRow"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.dirRow {
+                            display: flex;
+                            flex-direction: row;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>flex-direction: row-reverse;</code>
+            </p>
+            <section class="dirRowReverse">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkDirRowReverse" type="checkbox" name="menu" />
+            <label for="checkDirRowReverse">Code anzeigen</label>
+            <section class="code secDirRowReverse">
+                <section>
+                    
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="dirRowReverse"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.dirRowReverse {
+                            display: flex;
+                            flex-direction: row-reverse;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>flex-direction: column;</code>
+            </p>
+            <section class="dirCol">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkDirCol" type="checkbox" name="menu" />
+            <label for="checkDirCol">Code anzeigen</label>
+            <section class="code secDirCol">
+                <section>
+                    
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="dirCol"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.dirCol {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>flex-direction: column-reverse;</code>
+            </p>
+            <section class="dirColReverse">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkDirColReverse" type="checkbox" name="menu" />
+            <label for="checkDirColReverse">Code anzeigen</label>
+            <section class="code secDirColReverse">
+                <section>
+                    
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="dirColReverse"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.dirColReverse {
+                            display: flex;
+                            flex-direction: column-reverse;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>flex-wrap</h2>
+            <p>
+                Eine weitere Möglichkeit das Design anzupassen, ist die <code>flex: wrap;</code> 
+                Eigenschaft. Der Standard ist <code>flex: nowrap;</code> und muss nicht angegeben werden.
+                Mit <code>flex: wrap;</code> wird, nachdem der vorhandene Platz aufgebraucht ist, eine neue
+                Spalte bzw. Zeile aufgemacht.
+            </p>
+            <br>
+            <p>
+                Mit <code>flex-wrap: nowrap</code>
+            </p>
+            <section class="noWrap">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkNoWrap" type="checkbox" name="menu" />
+            <label for="checkNoWrap">Code anzeigen</label>
+            <section class="code secNoWrap">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="noWrap"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.noWrap {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            overflow: hidden;
+                        }
+                        section.noWrap > p {
+                            column-gap: 3em;
+                            flex-basis: 100px;
+                            flex-grow: 1;
+                            flex-shrink: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>flex-wrap: wrap</code>
+            </p>
+            <section class="wrap">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkWrap" type="checkbox" name="menu" />
+            <label for="checkWrap">Code anzeigen</label>
+            <section class="code secWrap">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="wrap"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.wrap {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            overflow: hidden;
+                            gap: 3em;
+                        }
+                        section.wrap > p {
+                            margin: 0;
+                            flex-basis: 100px;
+                            flex-grow: 1;
+                            flex-shrink: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>flex-wrap: wrap-reverse</code>
+            </p>
+            <section class="wrapReverse">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkWrapReverse" type="checkbox" name="menu" />
+            <label for="checkWrapReverse">Code anzeigen</label>
+            <section class="code secWrapReverse">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="wrapReverse"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.wrapReverse {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap-reverse;
+                            overflow: hidden;
+                            gap: 3em;
+                        }
+                        section.wrapReverse > p {
+                            margin: 0;
+                            flex-basis: 100px;
+                            flex-grow: 1;
+                            flex-shrink: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <p>
+                Es kann auch die <code>flex-direction</code> und <code>flex-wrap</code> kombiniert werden
+                und als <code>flex-flow</code> genutzt werden. Hier müssen zwei Werte angeben werden. 
+                Der erste für die direction z.B <code>column</code> und der zweite für den wrap z.B. <code>wrap</code>
+            </p>
+            <br>
+            <p>
+                Mit <code>flexflow: column wrap</code>
+            </p>
+            <section class="wrapCol">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkWrapCol" type="checkbox" name="menu" />
+            <label for="checkWrapCol">Code anzeigen</label>
+            <section class="code secWrapCol">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="wrapCol"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.wrapCol {
+                            display: flex;
+                            flex-flow: column wrap;
+                            overflow: hidden;
+                            height: 400px;
+                            gap: 1em;
+                        }
+                        section.wrapCol > p {
+                            margin: 0;
+                            flex-basis: 100px;
+                            flex-grow: 1;
+                            flex-shrink: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>justify-content</h2>
+            <p>
+                Mittels <code>justify-content</code> werden die Kind-Elemente auf der gewählten Achse
+                ausgerichtet (row and der Y-Achse und column an der X-Achse). Mit <code>start</code> oder
+                <code>flex-start</code> werden alle Kind-Elemente an den Start der Hauptachse zusammengeschoben.
+                Bei <code>end</code> bzw. <code>flex-end</code> werden diese am Ende der Hauptachse zusammengeschoben.
+                <code>center</code> schiebt die Elemente zusammen und positioniert sie in der Mitte des Eltern-Elements. 
+                <code>space-around</code> teilt den freien Platz im Eltern-Element auf und setzt diesen an jedes 
+                Kind-Element auf BEIDEN Seiten. <code>space-between</code> setzt das erste Kind-Element auf den Start 
+                Achse und das letzte auf das Ende. Die übrigen Elemente werden bei gleichbleibenden Abstand 
+                dazwischen angeordnet. <code>space-evenly</code> verteilt den freien Platz auch auf den Start und das Ende
+                des Eltern-Elements.
+            </p>
+            <br>
+            <p>
+                Mit <code>justify-content: start;</code> oder <code>justify-content: flex-start;</code>
+            </p>
+            <section class="justStart">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustStart" type="checkbox" name="menu" />
+            <label for="checkJustStart">Code anzeigen</label>
+            <section class="code secJustStart">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justStart"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justStart {
+                            display: flex;
+                            justify-content: start;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>justify-content: end;</code> oder <code>justify-content: flex-end;</code>
+            </p>
+            <section class="justEnd">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustEnd" type="checkbox" name="menu" />
+            <label for="checkJustEnd">Code anzeigen</label>
+            <section class="code secJustEnd">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justEnd"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justEnd {
+                            display: flex;
+                            justify-content: end;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>justify-content: center;</code>
+            </p>
+            <section class="justCenter">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustCenter" type="checkbox" name="menu" />
+            <label for="checkJustCenter">Code anzeigen</label>
+            <section class="code secJustCenter">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justCenter"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justCenter {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>justify-content: space-around;</code>
+            </p>
+            <section class="justAround">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustAround" type="checkbox" name="menu" />
+            <label for="checkJustAround">Code anzeigen</label>
+            <section class="code secJustAround">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justAround"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justAround {
+                            display: flex;
+                            justify-content: space-around;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>justify-content: space-between;</code> 
+            </p>
+            <section class="justBetween">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustBetween" type="checkbox" name="menu" />
+            <label for="checkJustBetween">Code anzeigen</label>
+            <section class="code secJustBetween">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justBetween"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justBetween {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>justify-content: space-evenly;</code>
+            </p>
+            <section class="justEvenly">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkJustEvenly" type="checkbox" name="menu" />
+            <label for="checkJustEvenly">Code anzeigen</label>
+            <section class="code secJustEvenly">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="justEvenly"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.justEvenly {
+                            display: flex;
+                            justify-content: space-evenly;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>align items</h2>
+            <p>
+                Mit der <code>align-items</code> Eigenschaft richtet die Kind-Elemente zueinander entlang der Kreuzachse aus. 
+                <code>align-items: stretch;</code> streckt die Kind-Elemente auf maximale Größe. 
+                <code>align-items: start;</code> platziert sie am Anfang der jeweiligen 
+                Achse, <code>align-items: end</code> positioniert am Ende dieser. <code>align-items: center;</code> positioniert 
+                die Kindelemente zentriert im Elternelement. <code>align-items: baseline;</code> richtet die Kindelemente so aus,
+                dass deren Inhalt auf der selben höhe beginnen (am unteren Ende der Zeichen).
+            </p>
+            <br>
+            <p>
+                Mit <code>align-items: stretch;</code>
+            </p>
+            <section class="alignStretch">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkAlignStretch" type="checkbox" name="menu" />
+            <label for="checkAlignStretch">Code anzeigen</label>
+            <section class="code secAlignStretch">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="alignStretch"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.alignStretch {
+                            display: flex;
+                            height: 200px;
+                            align-items: stretch;
+                        }
+                        section.alignStretch > p {
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-items: flex-start;</code>
+            </p>
+            <section class="alignStart">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkAlignStart" type="checkbox" name="menu" />
+            <label for="checkAlignStart">Code anzeigen</label>
+            <section class="code secAlignStart">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="alignStart"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.alignStart {
+                            display: flex;
+                            height: 200px;
+                            align-items: start;
+                        }
+                        section.alignStart > p {
+                            margin: 0 0.1em;
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-items: flex-end;</code>
+            </p>
+            <section class="alignEnd">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkAlignEnd" type="checkbox" name="menu" />
+            <label for="checkAlignEnd">Code anzeigen</label>
+            <section class="code secAlignEnd">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="alignEnd"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.alignEnd {
+                            display: flex;
+                            height: 200px;
+                            align-items: end;
+                        }
+                        section.alignEnd > p {
+                            margin: 0 0.1em;
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-items: center;</code>
+            </p>
+            <section class="alignCenter">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkAlignCenter" type="checkbox" name="menu" />
+            <label for="checkAlignCenter">Code anzeigen</label>
+            <section class="code secAlignCenter">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="alignCenter"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.alignCenter {
+                            display: flex;
+                            height: 200px;
+                            align-items: center;
+                        }
+                        section.alignCenter > p {
+                            margin: 0 0.1em;
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-items: baseline;</code> 
+            </p>
+            <section class="alignBaseline">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkAlignBaseline" type="checkbox" name="menu" />
+            <label for="checkAlignBaseline">Code anzeigen</label>
+            <section class="code secAlignBaseline">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="alignBaseline"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.alignBaseline {
+                            display: flex;
+                            height: 200px;
+                            align-items: baseline;
+                        }
+                        section.alignBaseline > p {
+                            margin: 0 0.1em;
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                        }
+                        section.alignBaseline > p:nth-of-type(2) {
+                            font-size: 3em;
+                        }
+                        section.alignBaseline > p:nth-of-type(3) {
+                            font-size: 1.5em;
+                        }
+                        section.alignBaseline > p:nth-of-type(4) {
+                            font-size: 4em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>align Content</h2>
+            <p>
+                Mit der <code>align-content</code> Eigenschaft richtet die Zeilen, bei <code>flex-direction: row;</code>
+                oder die Spalten, bei <code>flex-direction: column;</code> aus. <code>align-content: stretch;</code>
+                streckt die Kind-Elemente. <code>align-content: center</code> zentriert die Kind-Elemente in den Eltern-Elementen 
+                <code>align-content: start;</code> positioniert sie am Anfang dessen und <code>align-content: end;</code> am Ende.
+                <code>align-content: space-between;</code> positioniert die Kind-Elemente am Anfang und Ende und lässt die Mitte frei.
+                <code>align-content: space-around;</code> teilt den freien Platz auf, sodass je ein Teil vor und je ein Teil nach 
+                jedem Kind-Element ist. <code>align-content: space-evenly;</code> lässt den Abstand jeweils exakt gleich vom Rand zum Kind-Element
+                und auch zwichen den Kind-Elementen.
+            </p>
+            <br>
+            <p>
+                Mit <code>align-content: stretch</code>
+            </p>
+            <section class="aliConStretch">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliConStretch" type="checkbox" name="menu" />
+            <label for="checkAliConStretch">Code anzeigen</label>
+            <section class="code secAliConStretch">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliConStretch"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliConStretch {
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 400px;
+                            align-content: stretch;
+                        }
+                        section.aliConStretch > p {
+                            flex-basis: 200px;
+                            flex-grow: 1;
+                            margin: 0 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-content: center</code>
+            </p>
+            <section class="aliConCenter">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliConCenter" type="checkbox" name="menu" />
+            <label for="checkAliConCenter">Code anzeigen</label>
+            <section class="code secAliConCenter">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliConCenter"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliConCenter {
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 400px;
+                            align-content: center;
+                        }
+                        section.aliConCenter > p {
+                            flex-basis: 200px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-content: start</code>
+            </p>
+            <section class="aliConStart">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliConStart" type="checkbox" name="menu" />
+            <label for="checkAliConStart">Code anzeigen</label>
+            <section class="code secAliConStart">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliConStart"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliConStart {
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 400px;
+                            align-content: start;
+                        }
+                        section.aliConStart > p {
+                            flex-basis: 200px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-content: end</code>
+            </p>
+            <section class="aliConEnd">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliConEnd" type="checkbox" name="menu" />
+            <label for="checkAliConEnd">Code anzeigen</label>
+            <section class="code secAliConEnd">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliConEnd"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliConEnd {
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 400px;
+                            align-content: end;
+                        }
+                        section.aliConEnd > p {
+                            flex-basis: 200px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-content: space-between</code>
+            </p>
+            <section class="aliConBetween">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliConBetween" type="checkbox" name="menu" />
+            <label for="checkAliConBetween">Code anzeigen</label>
+            <section class="code secAliConBetween">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliConBetween"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliConBetween {
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 400px;
+                            align-content: space-between;
+                        }
+                        section.aliConBetween > p {
+                            flex-basis: 200px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-content: space-around</code>
+            </p>
+            <section class="aliConAround">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliConAround" type="checkbox" name="menu" />
+            <label for="checkAliConAround">Code anzeigen</label>
+            <section class="code secAliConAround">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliConAround"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliConAround {
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 400px;
+                            align-content: space-around;
+                        }
+                        section.aliConAround > p {
+                            flex-basis: 200px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-content: space-evenly</code>
+            </p>
+            <section class="aliConEven">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliConEven" type="checkbox" name="menu" />
+            <label for="checkAliConEven">Code anzeigen</label>
+            <section class="code secAliConEven">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliConEven"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliConEven {
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 400px;
+                            align-content: space-evenly;
+                        }
+                        section.aliConEven > p {
+                            flex-basis: 200px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>gap</h2>
+            <p>
+                Die Eigenschaft <code>gap:</code> wird mit Angaben wie zum Beispiel <code>em</code> oder <code>px</code> 
+                ergänzt und setzt eine feste Lücke zwischen den Kind-Elementen. <code>gap:</code> setzt die Lücke für die Zeile 
+                und Spalte, wohingegen <code>row-gap:</code> nur die Zeilen Lücke bestimmt und <code>column-gap:</code> nur 
+                die Spalten Lücke.
+            </p>
+            <br>
+            <p>
+                Mit <code>gap: .5em;</code>
+            </p>
+            <section class="gap">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkGap" type="checkbox" name="menu" />
+            <label for="checkGap">Code anzeigen</label>
+            <section class="code secGap">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="gap"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.gap {
+                            overflow-y: hidden;
+                            display: flex;
+                            height: 200px;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            gap: .5em;
+                        }
+                        section.gap > p {
+                            height: 50%;
+                            width: 40%;
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>row-gap: .5em;</code>
+            </p>
+            <section class="rowGap">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkRowGap" type="checkbox" name="menu" />
+            <label for="checkRowGap">Code anzeigen</label>
+            <section class="code secRowGap">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="rowGap"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.rowGap {
+                            overflow-y: hidden;
+                            display: flex;
+                            height: 200px;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            row-gap: .5em;
+                        }
+                        section.rowGap > p {
+                            height: 50%;
+                            width: 40%;
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>column-gap: .5em;</code>
+            </p>
+            <section class="colGap">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkColGap" type="checkbox" name="menu" />
+            <label for="checkColGap">Code anzeigen</label>
+            <section class="code secColGap">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="colGap"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.colGap {
+                            display: flex;
+                            height: 200px;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            column-gap: .5em;
+                        }
+                        section.colGap > p {
+                            height: 50%;
+                            width: 40%;
+                            margin: 0;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>flex-grow</h2>
+            <p>
+                Mit <code>flex-grow:</code> wird bestimmt ob die Kind-Elemente solange wachsen dürfen, bis 
+                das Eltern-Element keinen Platz mehr bietet. <code>flex-grow: 0;</code> deaktiviert die Eigenschaft 
+                und ist der Standard. <code>flex-grow: 1;</code> hingegen aktiviert das automatische Wachsen.
+            </p>
+            <br>
+            <p>
+                Mit <code>flex-grow: 0;</code>
+            </p>
+            <section class="noGrow">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkNoGrow" type="checkbox" name="menu" />
+            <label for="checkNoGrow">Code anzeigen</label>
+            <section class="code secNoGrow">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="noGrow"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.noGrow {
+                            display: flex;
+                            height: 400px;
+                        }
+                        section.noGrow > p {
+                            flex-grow: 0;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>flex-grow: 1;</code>
+            </p>
+            <section class="grow">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkGrow" type="checkbox" name="menu" />
+            <label for="checkGrow">Code anzeigen</label>
+            <section class="code secGrow">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="grow"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.grow {
+                            display: flex;
+                            height: 400px;
+                        }
+                        section.grow > p {
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>flex-basis</h2>
+            <p>
+                Mit <code>flex-basis</code> wird die Größe des Kind-Elements bestimmt und wird zum Beispiel 
+                mit <code>em</code> und <code>px</code> Werten ergänzt.
+            </p>
+            <br>
+            <p>
+                Mit <code>flex-basis: 100px;</code>
+            </p>
+            <section class="basis">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkBasis" type="checkbox" name="menu" />
+            <label for="checkBasis">Code anzeigen</label>
+            <section class="code secBasis">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="basis"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.basis {
+                            display: flex;
+                            height: 400px;
+                        }
+                        section.basis > p {
+                            flex-basis: 100px;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>
+                flexShrink
+            </h2>
+            <p>
+                Mit <code>flex-shrink</code> wird bestimmt, ob die Kind-Elemente kleiner werden dürfen,
+                wenn das Eltern-Element zu klein ist. <code>flex-shrink: 0;</code> deaktiviert diese Eigenschaft und
+                ist der Standard. <code>flex-shrink: 1;</code> aktiviert das automatische Schrumpfen.
+            </p>
+            <br>
+            <p>
+                Mit <code>flex-shrink: 0;</code>
+            </p>
+            <section class="noShrink">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkNoShrink" type="checkbox" name="menu" />
+            <label for="checkNoShrink">Code anzeigen</label>
+            <section class="code secNoShrink">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="noShrink"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.noShrink {
+                            display: flex;
+                            height: 400px;
+                            overflow: hidden;
+                        }
+                        section.noShrink > p {
+                            flex-shrink: 0;
+                            flex-basis: 300px;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>flex-shrink: 1;</code>
+            </p>
+            <section class="shrink">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </section>
+            <input id="checkShrink" type="checkbox" name="menu" />
+            <label for="checkShrink">Code anzeigen</label>
+            <section class="code secShrink">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="shrink"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.shrink {
+                            display: flex;
+                            height: 400px;
+                        }
+                        section.shrink > p {
+                            flex-shrink: 1;
+                            flex-basis: 300px;
+                            margin: 0.1em;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+        </article>
+
+
+        <article>
+            <h2>align-self</h2>
+            <p>
+                Mit <code>align-self</code> können Kind-Elemente unabhängig von deren Geschwister-Elementen 
+                ausgerichtet werden. Im Gegesatz zu der vorherigen Ausrichtungsarten, wird <code>align-self</code>
+                auf die Kind-Elemente selber angewandt. <code>align-self: stretch;</code> streckt das Kind-Element auf die 
+                maximal mögliche Größe. <code>align-self: center;</code> zentriert das jeweilige Kind-Element. 
+                <code>align-self: start;</code> positioniert es am Anfang und <code>align-self: end</code> am Ende.
+                <code>align-self: baseline;</code> richtet das Kind-Element an der Grundlinie aus.
+            </p>
+            <br>
+            <p>
+                Mit <code>align-self: stretch;</code>
+            </p>
+            <section class="aliSelStretch">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliSelStretch" type="checkbox" name="menu" />
+            <label for="checkAliSelStretch">Code anzeigen</label>
+            <section class="code secAliSelStretch">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliSelStretch"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliSelStretch {
+                            display: flex;
+                            align-items: start;
+                            height: 300px;
+                        }
+                        section.aliSelStretch > p {
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                        section.aliSelStretch > p:nth-of-type(2n) {
+                            align-self: stretch;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-self: center;</code>
+            </p>
+            <section class="aliSelCenter">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliSelCenter" type="checkbox" name="menu" />
+            <label for="checkAliSelCenter">Code anzeigen</label>
+            <section class="code secAliSelCenter">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliSelCenter"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliSelCenter {
+                            display: flex;
+                            height: 300px;
+                        }
+                        section.aliSelCenter > p {
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                        section.aliSelCenter > p:nth-of-type(2n) {
+                            flex-basis: 60px;
+                            align-self: center;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <p>
+                Mit <code>align-self: start;</code>
+            </p>
+            <section class="aliSelStart">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliSelStart" type="checkbox" name="menu" />
+            <label for="checkAliSelStart">Code anzeigen</label>
+            <section class="code secAliSelStart">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliSelStart"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliSelStart {
+                            display: flex;
+                            height: 300px;
+                        }
+                        section.aliSelStart > p {
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                        section.aliSelStart > p:nth-of-type(2n) {
+                            align-self: start;
+                            flex-basis: 60px;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <br>
+            <p>
+                Mit <code>align-self: end;</code>
+            </p>
+            <section class="aliSelEnd">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliSelEnd" type="checkbox" name="menu" />
+            <label for="checkAliSelEnd">Code zeigen</label>
+            <section class="code secAliSelEnd">
+                <section>
+                    <!-- WIP -->
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliSelEnd"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliSelEnd {
+                            display: flex;
+                            height: 300px;
+                        }
+                        section.aliSelEnd > p {
+                            flex-basis: 60px;
+                            flex-grow: 1;
+                            margin: 0.1em;
+                        }
+                        section.aliSelEnd > p:nth-of-type(2n) {
+                            align-self: end;
+                            flex-basis: 60px;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>
+                Mit <code>align-self: baseline;</code>
+            </p>
+            <section class="aliSelBase">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+            </section>
+            <input id="checkAliSelBase" type="checkbox" name="menu" />
+            <label for="checkAliSelBase">Code zeigen</label>
+            <section class="code secAliSelBase">
+                <section>
+                    <h3>
+                        HTML-Code:
+                    </h3>
+                        
+                    <pre>
+                        &ltsection class="aliSelBase"&gt
+                            &ltp&gt1&lt/p&gt
+                            &ltp&gt2&lt/p&gt
+                            &ltp&gt3&lt/p&gt
+                            &ltp&gt4&lt/p&gt
+                            &ltp&gt5&lt/p&gt
+                            &ltp&gt6&lt/p&gt
+                            &ltp&gt7&lt/p&gt
+                            &ltp&gt8&lt/p&gt
+                        &lt/section&gt
+                    </pre>
+                </section>
+                <section>
+                    <h3>
+                        CSS-Code:
+                    </h3>
+
+                    <pre>
+                        section.aliSelBase {
+                            display: flex;
+                            height: 300px;
+                            overflow: hidden;
+                        }
+                        section.aliSelBase > p {
+                            flex-basis: 100px;
+                            flex-grow: 1;
+                            flex-shrink: 0;
+                            margin: 0.1em;
+                            align-self: baseline;
+                        }
+                        section.aliSelBase > p:nth-of-type(2n -1) {
+                            font-size: 4em;
+                            flex-basis: 60px;
+                        }
+                        section.aliSelBase > p:nth-of-type(4n - 3) {
+                            font-size: 6em;
+                            flex-basis: 60px;
+                        }
+                    <pre>
+                </section>
+
+            </section>
+            
+        </article>
+    </main>
+    <aside class="right">
+        
+    </aside>
+    <footer>
+        <a href="#h1">nach Oben</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,619 @@
+*{
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+}
+section {
+    background-color: white;
+    padding: 1em;
+    border: 2px solid black;
+}
+section > p {
+    font-size: 2em;
+    background-color: orange;
+    margin: .5em;
+    text-align: center;
+}
+
+
+/*                */
+/* Display: Flex; */
+/*                */
+section.flexAnordnung {
+    background-color: white;
+    padding: 1em;
+    display: flex;
+}
+section.flexAnordnung > p {
+    background-color: orange;
+    margin: .5em;
+}
+
+
+/*                */
+/* Flex-Direction */
+/*                */
+/* Row */
+section.dirRow {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Row-Reverse */
+section.dirRowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Column */
+section.dirCol {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Column-Reverse */
+section.dirColReverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+/*           */
+/* Flex-Wrap */
+/*           */
+section.noWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+section.noWrap > p {
+    column-gap: 3em;
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+/* Wrap */
+section.wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 3em;
+}
+section.wrap > p {
+    margin: 0;
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+/* Wrap-Reverse */
+section.wrapReverse {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    overflow: hidden;
+    gap: 3em;
+}
+section.wrapReverse > p {
+    margin: 0;
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+/* Flex-Flow */
+section.wrapCol {
+    display: flex;
+    flex-flow: column wrap;
+    overflow: hidden;
+    height: 400px;
+    gap: 1em;
+}
+section.wrapCol > p {
+    margin: 0;
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+
+/*                 */
+/* Justify-Content */
+/*                 */
+/* Flex-Start */
+section.justStart {
+    display: flex;
+    justify-content: start;
+}
+section.justStart > p {
+    margin: 0;
+}
+
+/* Flex-End */
+section.justEnd {
+    display: flex;
+    justify-content: end;
+}
+section.justEnd > p {
+    margin: 0;
+}
+
+/* Center */
+section.justCenter {
+    display: flex;
+    justify-content: center;
+}
+section.justCenter > p {
+    margin: 0;
+}
+
+/* Space-Around */
+section.justAround {
+    display: flex;
+    justify-content: space-around;
+}
+section.justAround > p {
+    margin: 0;
+}
+
+/* Space-Between */
+section.justBetween {
+    display: flex;
+    justify-content: space-between;
+}
+section.justBetween > p {
+    margin: 0;
+}
+
+/* Space-Evenly */
+section.justEvenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+section.justEvenly > p {
+    margin: 0;
+}
+
+
+/*             */
+/* Align-Items */
+/*             */
+/* Stretch */
+section.alignStretch {
+    display: flex;
+    height: 200px;
+    align-items: stretch;
+}
+section.alignStretch > p {
+    flex-basis: 60px;
+    flex-grow: 1;
+}
+
+/* Flex-Start */
+section.alignStart {
+    display: flex;
+    height: 200px;
+    align-items: start;
+}
+section.alignStart > p {
+    margin: 0 0.1em;
+    flex-basis: 60px;
+    flex-grow: 1;
+}
+
+/* Flex-End */
+section.alignEnd {
+    display: flex;
+    height: 200px;
+    align-items: end;
+}
+section.alignEnd > p {
+    margin: 0 0.1em;
+    flex-basis: 60px;
+    flex-grow: 1;
+}
+
+/* Center */
+section.alignCenter {
+    display: flex;
+    height: 200px;
+    align-items: center;
+}
+section.alignCenter > p {
+    margin: 0 0.1em;
+    flex-basis: 60px;
+    flex-grow: 1;
+}
+
+/* Baseline */
+section.alignBaseline {
+    display: flex;
+    height: 200px;
+    align-items: baseline;
+}
+section.alignBaseline > p {
+    margin: 0 0.1em;
+    flex-basis: 60px;
+    flex-grow: 1;
+}
+section.alignBaseline > p:nth-of-type(2) {
+    font-size: 3em;
+}
+section.alignBaseline > p:nth-of-type(3) {
+    font-size: 1.5em;
+}
+section.alignBaseline > p:nth-of-type(4) {
+    font-size: 4em;
+}
+
+
+/*               */
+/* Align-Content */
+/*               */
+/* Stretch */
+section.aliConStretch {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: stretch;
+}
+section.aliConStretch > p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0 0.1em;
+}
+
+/* Center */
+section.aliConCenter {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: center;
+}
+section.aliConCenter > p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+
+/* Flex-Start */
+section.aliConStart {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: start;
+}
+section.aliConStart > p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+
+/* Flex-End */
+section.aliConEnd {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: end;
+}
+section.aliConEnd > p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+
+/* Space-Between */
+section.aliConBetween {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: space-between;
+}
+section.aliConBetween > p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+
+/* Space-Around */
+section.aliConAround {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: space-around;
+}
+section.aliConAround > p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+
+/* Space-Evenly */
+section.aliConEven {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: space-evenly;
+}
+section.aliConEven > p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+
+
+/*     */
+/* Gap */
+/*     */
+section.gap {
+    overflow-y: hidden;
+    display: flex;
+    height: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5em;
+}
+section.gap > p {
+    height: 50%;
+    width: 40%;
+    margin: 0;
+}
+
+/* Row-Gap */
+section.rowGap {
+    overflow-y: hidden;
+    display: flex;
+    height: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: .5em;
+}
+section.rowGap > p {
+    height: 50%;
+    width: 40%;
+    margin: 0;
+}
+
+/* Column-Gap */
+section.colGap {
+    display: flex;
+    height: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: .5em;
+}
+section.colGap > p {
+    height: 50%;
+    width: 40%;
+    margin: 0;
+}
+
+
+/*           */
+/* Flex-Grow */
+/*           */
+section.noGrow {
+    display: flex;
+    height: 400px;
+}
+section.noGrow > p {
+    flex-grow: 0;
+    margin: 0.1em;
+}
+
+/* Grow */
+section.grow {
+    display: flex;
+    height: 400px;
+}
+section.grow > p {
+    flex-grow: 1;
+    margin: 0.1em;
+}
+
+
+/*            */
+/* Flex-Basis */
+/*            */
+section.basis {
+    display: flex;
+    height: 400px;
+}
+section.basis > p {
+    flex-basis: 100px;
+    margin: 0.1em;
+}
+
+
+/*             */
+/* Flex-Shrink */
+/*             */
+section.noShrink {
+    display: flex;
+    height: 400px;
+    overflow: hidden;
+}
+section.noShrink > p {
+    flex-shrink: 0;
+    flex-basis: 300px;
+    margin: 0.1em;
+}
+
+/* Shrink */
+section.shrink {
+    display: flex;
+    height: 400px;
+}
+section.shrink > p {
+    flex-shrink: 1;
+    flex-basis: 300px;
+    margin: 0.1em;
+}
+
+/*            */
+/* Align-Self */
+/*            */
+/* Stretch */
+section.aliSelStretch {
+    display: flex;
+    align-items: start;
+    height: 300px;
+}
+section.aliSelStretch > p {
+    flex-basis: 60px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+section.aliSelStretch > p:nth-of-type(2n) {
+    align-self: stretch;
+}
+
+/* Center */
+section.aliSelCenter {
+    display: flex;
+    height: 300px;
+}
+section.aliSelCenter > p {
+    flex-basis: 60px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+section.aliSelCenter > p:nth-of-type(2n) {
+    flex-basis: 60px;
+    align-self: center;
+}
+
+/* Flex-Start */
+section.aliSelStart {
+    display: flex;
+    height: 300px;
+}
+section.aliSelStart > p {
+    flex-basis: 60px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+section.aliSelStart > p:nth-of-type(2n) {
+    align-self: start;
+    flex-basis: 60px;
+}
+
+/* Flex-End */
+section.aliSelEnd {
+    display: flex;
+    height: 300px;
+}
+section.aliSelEnd > p {
+    flex-basis: 60px;
+    flex-grow: 1;
+    margin: 0.1em;
+}
+section.aliSelEnd > p:nth-of-type(2n) {
+    align-self: end;
+    flex-basis: 60px;
+}
+
+/* Baseline */
+section.aliSelBase {
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+}
+section.aliSelBase > p {
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin: 0.1em;
+    align-self: baseline;
+}
+section.aliSelBase > p:nth-of-type(2n -1) {
+    font-size: 4em;
+    flex-basis: 60px;
+}
+section.aliSelBase > p:nth-of-type(4n - 3) {
+    font-size: 6em;
+    flex-basis: 60px;
+}
+
+
+
+input, section.code {
+    display: none;
+}
+label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+input#checkFlexAnordnung:checked~section.secFlexAnordnung,
+input#checkNoFlexAnordnung:checked~section.secNoFlexAnordnung,
+
+input#checkdirRow:checked~section.seccDirRow,
+input#checkDirRowReverse:checked~section.secDirRowReverse,
+input#checkDirCol:checked~section.secDirCol,
+input#checkDirColReverse:checked~section.secDirColReverse,
+
+input#checkNoWrap:checked~section.secNoWrap,
+input#checkWrap:checked~section.secWrap,
+input#checkWrapReverse:checked~section.secWrapReverse,
+input#checkWrapCol:checked~section.secWrapCol,
+
+input#checkJustStart:checked~section.secJustStart,
+input#checkJustEnd:checked~section.secJustEnd,
+input#checkJustCenter:checked~section.secJustCenter,
+input#checkJustAround:checked~section.secJustAround,
+input#checkJustBetween:checked~section.secJustBetween,
+input#checkJustEvenly:checked~section.secJustEvenly,
+
+input#checkAlignStretch:checked~section.secAlignStretch,
+input#checkAlignStart:checked~section.secAlignStart,
+input#checkAlignEnd:checked~section.secAlignEnd,
+input#checkAlignCenter:checked~section.secAlignCenter,
+input#checkAlignBaseline:checked~section.secAlignBaseline,
+
+input#checkAliConStretch:checked~section.secAliConStretch,
+input#checkAliConCenter:checked~section.secAliConCenter,
+input#checkAliConStart:checked~section.secAliConStart,
+input#checkAliConEnd:checked~section.secAliConEnd,
+input#checkAliConBetween:checked~section.secAliConBetween,
+input#checkAliConAround:checked~section.secAliConAround,
+input#checkAliConEven:checked~section.secAliConEven,
+
+input#checkGap:checked~section.secGap,
+input#checkRowGap:checked~section.secRowGap,
+input#checkColGap:checked~section.secColGap,
+
+input#checkNoGrow:checked~section.secNoGrow,
+input#checkGrow:checked~section.secGrow,
+
+input#checkBasis:checked~section.secBasis,
+
+input#checkNoShrink:checked~section.secNoShrink,
+input#checkShrink:checked~section.secShrink,
+
+input#checkAliSelStretch:checked~section.secAliSelStretch,
+input#checkAliSelCenter:checked~section.secAliSelCenter,
+input#checkAliSelStart:checked~section.secAliSelStart,
+input#checkAliSelEnd:checked~section.secAliSelEnd,
+input#checkAliSelBase:checked~section.secAliSelBase {
+
+    display: flex;
+}
+
+/*  */
+@media (width > 850px) {
+    *{
+        overflow-x: visible;
+    }
+    section > p{
+        font-size: 3em;
+    }
+    section.noWrap {
+        overflow: inherit;
+    }
+}

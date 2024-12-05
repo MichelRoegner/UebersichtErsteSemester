@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/styleMain.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strukturierte Programmierung</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <img src="images/HSFL_Logo_weiss.png" alt="">
+            <a href="index.html" class="active">Startseite</a>
+            <div id="myLinks">
+                <div id="firstSemester" class="dropdown">
+                    <div>1.Semester</div>
+                    <div id="firstSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="iid.html">Interface und Interaktionsdesign</a>
+                            </li>
+                            <li>
+                                <a href="strukprog.html">Strukturierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="englisch.html">Fachenglisch</a>
+                            </li>
+                            <li>
+                                <a href="cabs.html">Computerarchitektur und Betriebssysteme</a>
+                            </li>
+                            <li>
+                                <a href="webdes.html">Webdesign</a>
+                            </li>
+                            <li>
+                                <a href="mathe1.html">Mathematik 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="secondSemester" class="dropdown">
+                    <div>2.Semester</div>
+                    <div id="secondSemesterContent" class="dropdownContent">
+                        <ul>
+                            <li>
+                                <a href="bwl.html">Betriebswirtschaftslehre</a>
+                            </li>
+                            <li>
+                                <a href="webtech.html">Web-Technologien</a>
+                            </li>
+                            <li>
+                                <a href="ute.html">Usability Testing & Engineering</a>
+                            </li>
+                            <li>
+                                <a href="oop.html">Objektorientierte Programmierung</a>
+                            </li>
+                            <li>
+                                <a href="cone.html">Computernetze / Netzwerkkommunikation</a>
+                            </li>
+                            <li>
+                                <a href="kop.html">Kommunikation und Präsentation</a>
+                            </li>
+                            <li>
+                                <a href="mathe2.html">Mathematik 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="dropdown()">
+            <div class="container" onclick="change(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </a>
+        </nav>
+        <h1>Strukturierte Programmierung</h1>
+    </header>
+
+    <aside id="left">
+
+    </aside>
+
+    <main>
+        <section>
+            <h2>Übersicht</h2>
+            <p>Das Modul "Strukturierte Programmierung" führt in die Grundlagen der 
+                Programmierung in Java ein. Es kombiniert Theorie und Praxis, um die 
+                Entwicklung systematischer und effizienter Algorithmen zu ermöglichen.</p>
+        </section>
+        <section>
+            <h2>Inhalte</h2>
+            <ul>
+                <li><strong>Grundlagen der Programmierung:</strong> Variablen, Datentypen, Kontrollstrukturen.</li>
+                <li><strong>Methoden:</strong> Deklaration, Parameterübergabe und Rückgabewerte.</li>
+                <li><strong>Arrays:</strong> Arbeit mit eindimensionalen und zweidimensionalen Arrays.</li>
+                <li><strong>Fehlerbehandlung:</strong> Umgang mit Laufzeitfehlern und Debugging.</li>
+                <li><strong>Erweiterte Anwendungen:</strong> Bearbeitung von Notenlisten, Lotto-Simulationen und Zeichenketten.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ablauf</h2>
+            <ul>
+                <li><strong>Theoretische Grundlagen:</strong>
+                    <ul>
+                        <li>Einführung in die Syntax von Java und algorithmische Konzepte.</li>
+                        <li>Erarbeitung von Kontrollstrukturen, Methoden und Fehlerbehandlung.</li>
+                    </ul>
+                </li>
+                <li><strong>Praktische Übungen:</strong>
+                    <ul>
+                        <li>Entwicklung eines BMI-Rechners und Taschenrechners.</li>
+                        <li>Programmierung von Array-Manipulationen und Simulationen.</li>
+                        <li>Arbeiten mit Dateien und JUnit-Tests.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ziele des Moduls</h2>
+            <p>Das Modul vermittelt die Grundlagen der strukturierten Programmierung. Ziel ist 
+                es, effiziente und korrekte Programme zu entwickeln und zu testen, 
+                sowie grundlegende Anwendungen zu erstellen.</p>
+        </section>
+        <section>
+            <h2>Beispiel</h2>
+            <p>
+                Mittels verschachtelten for-Anweisungen schreiben Sie ein Programm, das das Sternchen
+                in n Zeilen und in Form eines Dreieckes auf dem Bildschirm ausgibt. n ist eine positive ganze Zahl, die
+                durch einen Scanner eingelesen wird.
+            </p>
+            <p>
+                <img src="images/strukprog.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            </p>
+        </section>
+    </main>
+
+    <aside id="right">
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function dropdown() {
+            let links = document.getElementById("myLinks");
+            links.style.display = links.style.display === "block" ? "none" : "block";
+        }
+
+        function change(x) {
+            x.classList.toggle("change");
+        }
+        </script>
+</body>
+</html>
